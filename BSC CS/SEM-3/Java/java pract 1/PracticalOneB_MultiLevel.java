@@ -1,10 +1,10 @@
-class parent {
+class Parent {
     public void printParent(){
         System.out.println("This is Parent");
     }
 }
 
-class ChildOne extends parent {
+class ChildOne extends Parent {
     public void printChildOne(){
         System.out.println("This is Child One");
     }
