@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Mapping</title>
+    <style>
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Image Maps</h1>
+        <p>Click on the <b>Earth</b>, the <b>Google Map</b>, or the <b>Football</b>, or the <b>Crickat Bat And cricket Ball</b>, or the <b>Ipad</b>, or the <b>Harley-Davidson Bike</b> to go to a new
+            page and read more about the topic:</p>
+        <img src="./image_mapping.jpg" width="800px" height="800px" alt="workmap" usemap="#workmap">
+
+        <map name="workmap">
+            <area shape="circle" coords="180,160,137" alt="earth" href="./earth.html" target="_blank">
+
+        <map name="workmap">
+            <area shape="rect" coords="699,24,509,227" alt="google_map" href="./google_map.html" target="_blank">
+
+        <map name="workmap">
+            <area shape="rect" coords="450,272,722,477" alt="ipad" href="./ipad.html" target="_blank">
+
+        <map name="workmap">
+            <area shape="circle" coords="58,632,25" alt="cricket_ball" href="./cricket_ball.html" target="_blank">
+
+        <map name="workmap">
+            <area shape="poly" coords="362,407,207,492,53,695,101,714,260,544" alt="cricket_bat" href="./cricket_bat.html" target="_blank">
+
+        <map name="workmap">
+            <area shape="rect" coords="371,520,737,765" alt="harley_davidson" href="./harley_davidson.html" target="_blank">
+
+        <map name="workmap">
+            <area shape="circle" coords="123,389,72" alt="football" href="./football.html" target="_blank">
+
+        </map>
+    </div>
+</body>
+
+</html>
