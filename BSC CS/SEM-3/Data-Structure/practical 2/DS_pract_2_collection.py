@@ -16,5 +16,4 @@ de.pop()
 print("\nThe deque after deleting from right is : ", de)
 
 de.popleft()
-
 print("\nThe deque after deleting from left is : ", de)
