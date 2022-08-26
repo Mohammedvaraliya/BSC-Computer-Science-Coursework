@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implementing SetTimeOut</title>
+</head>
+
+<body>
+    <h3>Varaliya Mohammed | S110</h3>
+    <center>
+        <h1>Web Programming Practical 13</h1><br>
+        <p><b>Showing alert box in 3 seconds using SetTimeOut function</b></p><br>
+        <b>Click to get the popup box after 3 seconds :</b>
+        <button onclick="setTimeOutfunc()">Click ME</button>
+    </center>
+</body>
+<script>
+    let timeout;
+
+    function setTimeOutfunc() {
+        timeout = setTimeout(greetingfunc, 3000);
+    }
+
+    function greetingfunc() {
+        alert("Have a Nice Day!")
+
+    }
+</script>
+
+</html>
