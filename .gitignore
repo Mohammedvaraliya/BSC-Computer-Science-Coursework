@@ -1,3 +1,8 @@
 # Ignore all the java class files
 
 *.class
+.idea
+*.xml
+out
+*.iml
+*.form
