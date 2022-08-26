@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation Of TextBox</title>
+</head>
+
+<body>
+    <h3>Varaliya Mohammed | S110</h3>
+    <center>
+        <h1>Web Programming Practical 12</h1><br>
+        <p><b> TextBox Validation</b></p><br>
+        <form action="./index.html" onsubmit="return validateCheckBox()">
+            <b>checking TextBox :</b>
+            <input type="text" id="validating">
+            <input type="submit" name="submit" id="submit">
+        </form>
+    </center>
+</body>
+
+<script>
+
+    function validateCheckBox() {
+        let x = document.getElementById('validating').value;
+        if (x === "") {
+            alert("TextBox is Empty");
+        }
+    }
+</script>
+
+</html>
