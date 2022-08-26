@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial Of a Number</title>
+</head>
+<body>
+    <h1>Varaliya Mohammed | S110</h1>
+    <h1>Web programming Practical No :  10</h1>
+    <h3>write a JavaScript to find a factorial of a given Number</h3>
+</body>
+
+<script>
+    const factorial = (n) => {
+        if (n <= 1){
+            return 1
+        }
+
+        return n * factorial(n-1);
+    }
+
+    const findFactorial = () =>{
+        const numb = parseInt(prompt("Enter a Number"));
+
+        if(isNaN(numb)){
+            alert("Please enter a valid Number");
+            return findFactorial();
+        }
+        else{
+            alert(`The factorial of ${numb} is ${factorial(numb)}`)
+        }
+
+        const rerun = confirm("Do you want to run the program again?");
+        rerun && findFactorial();
+    }
+
+    findFactorial();
+
+
+</script>
+
+</html>
