@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 8 | JavaScript</title>
+</head>
+<body>
+    <h1>Varaliya Mohammed | S110</h1>
+    <h1>Html Practical No 8 </h1>
+
+    <input type="text" id="input" placeholder="Enter a number">
+
+
+</body>
+<script>
+
+    const checkNumber = () => {
+    
+    const numb = parseInt(prompt("Enter a number"));
+
+        if (isNaN(numb)){
+            alert("Please enter a number");
+            return checkNumber();
+        }
+
+        if(numb % 2 == 0){
+            alert("Your number is Even");
+        }
+        else{
+            alert("Your Number is Odd");
+        }
+
+        const rerun = confirm("Do you want to run the program again");
+        rerun && checkNumber();
+
+    }
+
+    checkNumber();
+
+
+</script>
+</html>
