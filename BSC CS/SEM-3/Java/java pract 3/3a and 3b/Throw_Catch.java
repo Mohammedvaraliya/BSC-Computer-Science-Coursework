@@ -5,7 +5,7 @@ class MyExceptions extends Exception{
     }
 }
 
-public class PracticalThreeA_and_B {
+public class Throw_Catch {
     public static void main(String[] args) {
 
         // Practical 3(a)
@@ -18,7 +18,7 @@ public class PracticalThreeA_and_B {
 
         // Practical 3(b)
         try{
-            int total = 1/0;
+            int Total = 1/0;
             System.out.println("Printing try block");
         }
         catch(Exception ex){

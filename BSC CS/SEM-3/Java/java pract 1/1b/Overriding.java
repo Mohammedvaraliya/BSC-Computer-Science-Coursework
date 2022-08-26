@@ -15,7 +15,7 @@ class Child extends Parent {
 
 }
 
-public class PracticalOneB {
+public class Overriding {
 
     public static void main(String[] args) {
 

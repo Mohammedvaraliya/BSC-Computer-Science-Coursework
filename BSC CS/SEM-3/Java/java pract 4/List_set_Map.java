@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class PracticalFour {
+public class List_set_Map {
     public static void main(String[] args) {
 
         // List

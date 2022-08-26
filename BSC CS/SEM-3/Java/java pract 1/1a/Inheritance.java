@@ -30,7 +30,7 @@ class Test{
         System.out.println("Printing");
     }
 }
-public class PracticalOneA {
+public class Inheritance {
 
     public static void main(String[] args) {
 

@@ -37,7 +37,7 @@ class Human extends Animal{
     }
 }
 
-public class PracticalTwoA_Abstract_Class_Method {
+public class Abstract_Class_Method {
     public static void main(String args[]){
         Dog d = new Dog();
         Cat c = new Cat();

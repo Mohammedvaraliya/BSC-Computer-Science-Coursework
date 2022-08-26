@@ -22,7 +22,7 @@ class ChildThree extends ChildTwo{
     }
 }
 
-public class PracticalOneB_MultiLevel {
+public class MultiLevel {
 
     public static void main(String[] args) {
 

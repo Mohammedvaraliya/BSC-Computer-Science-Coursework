@@ -28,7 +28,7 @@ class Moving implements Testing, Move{
 }
 
 
-public class PracticalTwoB_Interface {
+public class Interface {
 
     public static void main(String args[]){
 
