@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implementing SetTimeOut & clearTimeout</title>
+</head>
+
+
+
+<body>
+    <h3>Varaliya Mohammed | S110</h3>
+    <center>
+        <h1>Web Programming Practical 15</h1><br>
+        <p><b>Implementing setTimeout and cleartimeOut function</b></p><br>
+        <table>
+        <tr>
+            <td><h3>Click to get the popup box after 3 seconds :</h3></td>
+            <td><button onclick="setTimeOutfunc()">Click ME</button></td>
+        </tr>
+        <br>
+        <tr>
+            <td><h3>Click to stop the popup box to display after 3 seconds :</h3></td>
+            <td><button onclick="stopTimeOutFunction()">Click ME</button></td>
+        </tr>
+        
+    </table>
+    </center>
+</body>
+<script>
+    let timeout;
+
+    function setTimeOutfunc() {
+        timeout = setTimeout(greetingfunc, 3000);
+    }
+
+    function greetingfunc() {
+        alert("Have a Nice Day!")
+
+    }
+
+    function stopTimeOutFunction() {
+        clearTimeout(timeout);
+    }
+</script>
+
+</html>
