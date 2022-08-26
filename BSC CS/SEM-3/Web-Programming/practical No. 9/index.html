@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // A program to find the sum of first 'n' number
+    const sumOfNaturalNumbers = () => {
+
+        const num = parseInt(prompt("Enter a Number"));
+
+        if (isNaN(num)) {
+            alert("Enter a valid number")
+            return sumOfNaturalNumbers()
+        }
+
+        alert(`The sum of numbers from ${1} to ${num} is ${calculateSum(num)}`)
+
+        const rerun = confirm("Do you want to run the program again")
+        rerun && sumOfNaturalNumbers();
+    }
+
+    const calculateSum = (n) => {
+        let sum = 0
+
+        for (i = 1; i <= n; i++) {
+            sum += i
+        }
+
+        return sum
+    }
+
+    sumOfNaturalNumbers()
+</script>
+
+</html>
