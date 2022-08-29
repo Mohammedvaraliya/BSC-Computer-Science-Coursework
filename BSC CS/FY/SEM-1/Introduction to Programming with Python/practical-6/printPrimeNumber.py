@@ -24,3 +24,4 @@ def printPrimeNumber():
 
 if __name__ == "__main__":
     printPrimeNumber()
+    
