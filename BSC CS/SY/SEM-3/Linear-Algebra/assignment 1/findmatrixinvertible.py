@@ -1,7 +1,7 @@
 # Write a python program to enter a matrix and check if it is invertible. If invertible exists then find inverse.
 import numpy as np
 
-matrix = np.array([[5,2], [10,2]])
+matrix = np.array([[5,1], [10,2]])
 print("Matrix M = ")
 print(matrix)
 
