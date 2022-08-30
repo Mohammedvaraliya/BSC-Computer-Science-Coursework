@@ -4,7 +4,7 @@ import java.util.*;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
 
-public class JSONEncoding {
+public class JSONEncodingDecoding {
 
     public static void main(String[] args) {
 
