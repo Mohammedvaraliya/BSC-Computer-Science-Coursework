@@ -21,8 +21,9 @@
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         font-size: large;
     }
+
     h2 {
-        color:brown;
+        color: rgb(57, 0, 90);
     }
 </style>
 
@@ -54,21 +55,30 @@
             <tr></tr>
         </table>
 
-        <div id="simpleInt"> </div>
+        <div id="simpleInt" style="text-align: center;"> </div>
+        <div id="totalAmt" style="text-align: center;"> </div>
 
     </div>
 
     <script>
 
         function simpleInterest(params) {
-            let p = document.getElementById("principleAmtNo").value;
-            let t = document.getElementById("time").value;
-            let r = document.getElementById("rateOfInt").value;
+            let principleAmtNo = parseFloat(document.querySelector("#principleAmtNo").value);
+            let time = parseFloat(document.querySelector("#time").value);
+            let rateOfInt = parseFloat(document.querySelector("#rateOfInt").value);
 
-            let simpleINT = parseInt((p * t * r) / 100);
+            if (isNaN(principleAmtNo) || isNaN(time) || isNaN(rateOfInt)) {
+                alert("Please enter valid details");
+                return;
+            }
 
-            let data = document.getElementById("simpleInt");
-            data.innerHTML = `<h2>Simple Interest : ${simpleINT}</h2>`
+            let simpleINT = parseFloat(principleAmtNo * (rateOfInt / 100) * time);
+
+            let data1 = document.getElementById("simpleInt");
+            data1.innerHTML = `<h2>The Simple Interest is : ${simpleINT}</h2>`
+
+            let data2 = document.getElementById("totalAmt");
+            data2.innerHTML = `<h2>The total amount is : ${principleAmtNo + simpleINT}</h2>`
 
         }
 
