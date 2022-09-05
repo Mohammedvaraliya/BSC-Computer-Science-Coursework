@@ -7,7 +7,6 @@ def myfunc():
     time.sleep(10)
     print("myfunc ended")
 
-
 if __name__ == '__main__':
     print('main started')
     t = threading.Thread(target=myfunc)
