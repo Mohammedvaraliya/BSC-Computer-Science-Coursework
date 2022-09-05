@@ -5,7 +5,7 @@
 <ol type="1">
     <li>Start</li>
     <li>Initialize or write the method</li>
-    <li>Initialize the necessary number of thread</li>
+    <li>Initialize the necessary number of threads</li>
     <li>Assing one method per thread</li>
     <li>Run thread</li>
     <li>End</li>
