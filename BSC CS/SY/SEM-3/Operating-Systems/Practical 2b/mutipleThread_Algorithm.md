@@ -4,7 +4,7 @@
 <h2>The Algorithm</h2>
 <ol type="1">
     <li>Start</li>
-    <li>Initialize or write he method</li>
+    <li>Initialize or write the method</li>
     <li>Initialize the necessary number of thread</li>
     <li>Assing one method per thread</li>
     <li>Run thread</li>
