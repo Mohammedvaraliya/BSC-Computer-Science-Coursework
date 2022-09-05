@@ -3,8 +3,10 @@
 <br>
 <h2>The Algorithm</h2>
 <ol type="1">
+    <li>Start</li>
     <li>Initialize or write a method</li>
     <li>Initialize a thread</li>
     <li>Assing method on the thread</li>
     <li>Run thread</li>
+    <li>End</li>
 </ol>
