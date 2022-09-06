@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/style.css">
+  <title>Login Form</title>
+</head>
+
+<body>
+  <h2>Varaliya Mohammed | S110</h2><br>
+  <div class="container">
+    <div class="main">
+      <h2>Javascript Login Form Validation</h2>
+
+      <form id="form_id" method="post" name="myform">
+        <label>User Name :</label>
+        <input type="text" name="username" id="username" />
+        <label>Password (8 characters maximum) :</label>
+        <input type="password" name="password" id="password" />
+        <input type="button" value="Login" id="submit" onclick="validate()" />
+      </form>
+      <br>
+      <b>Note : </b>For this login_form use following username and password. <br/><br>
+      <b class="valid">User Name : username should be greater than 1 </b><br />
+      <b class="valid">Password : Password must be at least 4 and 8 characters long.</b>
+    </div>
+  </div>
+</body>
+<script src="js/login_form.js"></script>
+
+</html>
