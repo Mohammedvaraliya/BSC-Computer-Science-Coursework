@@ -25,15 +25,16 @@
 <h2>The Algorithm</h2>
 <ol type="1">
     <li>Start</li>
-    <li>Initialize an array of fixed size or take a limit of array from user.</li>
-    <li>Initialize two variables with 0 and 1 values.</li>
-    <li>Store these two variable as first two elements of initialized array.</li>
-    <li>Take one more variable.</li>
-    <li>The value of this variable would be the addition of last assign values of the array i.e [(n-1) + (n-2)].</li>
-    <li>Repeat (6) till the number you want Fibonacci of or to user limit.</li>
-    <li>Run first addition of the program on thread [t1] and notify the other thread [t2].</li>
-    <li>once the operation complete on thread [t1] and other thread [t2] recieved notification from thread [t1] perform next addition on thread [t2] and send notification to thread [t1].</li>
-    <li>Repeat (8) and (9) till you reach the number you need Fibonacci of or to user limit.</li>
-    <li>Run thread</li>
+    <li>Initialize a queue with fixed size.</li>
+    <li>Initialize the semaphore variables.</li>
+    <li>m = semaphore(1) -Indicate a Mutual Exclusion</li>
+    <li>empty = semaphore(10) -number of slots in the buffer</li>
+    <li>full = semaphore(0) -Initial value of full is 0</li>
+    <li>Both the producer and consumer acquire semaphore lock for mutex whenever enqueue or dequeue occurs.</li>
+    <li>Producer producing the data , m = semaphore(0).</li>
+    <li>When producer completes its job, m = semaphore(1)</li>
+    <li>Consumer consuming the data , m = semaphore(0).</li>
+    <li>When consumer completes its job, m = semaphore(1)</li>
+    <li>Repeat (8),(9),(10) and (11) till the full = semaphore(0) is full = semaphore(10)</li>
     <li>End</li>
 </ol>
