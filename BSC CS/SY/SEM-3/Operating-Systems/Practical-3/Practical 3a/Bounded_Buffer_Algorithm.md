@@ -1,6 +1,8 @@
 <h2>Problem Statement</h2>
-<h4>Bounded Buffer Problem</h4>
+<h3>Bounded Buffer Problem</h3>
 <p>Bounded buffer problem, which is also called producer consumer problem, is one of the classic problems of synchronization. Let's start by understanding the problem here, before moving on to the solution and program code.</p>
+
+<h3>What is the Problem Statement?</h3>
 
 <p>There is a buffer of n slots and each slot is capable of storing one unit of data. There are two processes running, namely, producer and consumer, which are operating on the buffer.</p>
 
@@ -10,7 +12,7 @@
 
 <p>There needs to be a way to make the producer and consumer work in an independent manner.</p>
 
-<h4>Here's a Solution</h4>
+<h3>Here's a Solution</h3>
 
 <p>One solution of this problem is to use semaphores. The semaphores which will be used here are:</p>
 <ul>
