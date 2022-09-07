@@ -4,18 +4,21 @@
 
 <p>There is a buffer of n slots and each slot is capable of storing one unit of data. There are two processes running, namely, producer and consumer, which are operating on the buffer.</p>
 
-<center>
 <img src="https://static.studytonight.com/operating-system/images/bounded-buffer-problem.png" alt="Bounded Buffer Problem">
-</center>
 
-<p>Similarly,</p>
+<p>A producer tries to insert data into an empty slot of the buffer. A consumer tries to remove data from a filled slot in the buffer. As you might have guessed by now, those two processes won't produce the expected output if they are being executed concurrently.</p>
 
-<p>“2” is obtained by adding the second and third term (1+1 = 2)</p>
+<p>There needs to be a way to make the producer and consumer work in an independent manner.</p>
 
-<p>“3” is obtained by adding the third and fourth term (1+2) and so on.</p>
+<h4>Here's a Solution</h4>
 
-<p>For example, the next term after 21 can be found by adding 13 and 21. Therefore, the next term in the sequence is 34.</p>
-<p>Here i have implement Fibonacci Sequence using multithreading i.e multiple threads</p>
+<p>One solution of this problem is to use semaphores. The semaphores which will be used here are:</p>
+<ul>
+<li>m, a binary semaphore which is used to acquire and release the lock.</li>
+<li>empty, a counting semaphore whose initial value is the number of slots in the buffer, since, initially all slots are empty.</li>
+<li>full, a counting semaphore whose initial value is 0.</li>
+</ul>
+<p>At any instant, the current value of empty represents the number of empty slots in the buffer and full represents the number of occupied slots in the buffer.</p>
 <br>
 <h2>The Algorithm</h2>
 <ol type="1">
