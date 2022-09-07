@@ -28,13 +28,11 @@
     <li>Initialize a queue with fixed size.</li>
     <li>Initialize the semaphore variables.</li>
     <li>m = semaphore(1) -Indicate a Mutual Exclusion</li>
-    <li>empty = semaphore(10) -number of slots in the buffer</li>
-    <li>full = semaphore(0) -Initial value of full is 0</li>
     <li>Both the producer and consumer acquire semaphore lock for mutex whenever enqueue or dequeue occurs.</li>
-    <li>Producer producing the data , m = semaphore(0).</li>
-    <li>When producer completes its job, m = semaphore(1)</li>
-    <li>Consumer consuming the data , m = semaphore(0).</li>
-    <li>When consumer completes its job, m = semaphore(1)</li>
-    <li>Repeat (8),(9),(10) and (11) till the full = semaphore(0) is full = semaphore(10)</li>
+    <li>When Producer producing the data , decrement the semaphore m as obtained mutex i.e m--.</li>
+    <li>When producer completes its job, increment the semaphore m as it exited from critical section i.e m++</li>
+    <li>Consumer consuming the data , decrement the semaphore m as obtained mutex i.e m--.</li>
+    <li>When consumer completes its job, increment the semaphore m as it exited from critical section i.e m++</li>
+    <li>Repeat (6),(7),(8) and (9) till all the process over</li>
     <li>End</li>
 </ol>

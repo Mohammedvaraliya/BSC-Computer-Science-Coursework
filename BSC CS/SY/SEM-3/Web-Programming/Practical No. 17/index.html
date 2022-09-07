@@ -2,65 +2,59 @@
 <html>
 <head>
   <title>Registration Form</title>
-  <style>
-    table.center {
-    margin-left: auto; 
-    margin-right: auto;
-    margin-top: 30px;
-    }
-  </style>
+  <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
- <form>
+ <form name="registration" >
      <h1>Register to ask any service or query!</h1>
   <table class="center">
    <tr>
     <td>Name :</td>
-    <td><input type="text"></td>
+    <td><input type="text" id="name" required></td>
    </tr>
    <tr>
     <td>Age :</td>
-    <td><input type="text"></td>
+    <td><input type="text" inputmode="numeric" id="age" required></td>
+   </tr>
+   <tr>
+    <td>Email :</td>
+    <td><input type="email" inputmode="email" id="email" required></td>
+   </tr>
+   <tr>
+    <td>Date Of Birth :</td>
+    <td><input type="date" id="dateOfBirth"></td>
    </tr>
    <tr>
     <td>Gender :</td>
     <td>
-        <input type="radio" name="Gender"> Male
-        <input type="radio" name="Gender"> Female
+        <input type="radio" name="Gender" value="1"> Male
+        <input type="radio" name="Gender" value="2"> Female
     </td>
    </tr>
    <tr>
     <td>Hobbies :</td>
-    <td>
-        <input type="radio" name="Cooking"> Cooking
-        <input type="radio" name="Hiking"> Hiking
-        <input type="radio" name="Painting"> Painting
-        <input type="radio" name="Sculpture"> Sculpture
-        <input type="radio" name="Writing"> Writing
-        <input type="radio" name="Running"> Running
-        <input type="radio" name="Dancing"> Dancing
-        <input type="radio" name="Yoga"> Yoga
-        <input type="radio" name="Meditating"> Meditating
-        <input type="radio" name="Reading"> Reading
-        <input type="radio" name="Playing Video Games"> Playing Video Games
-        <input type="radio" name="Gardening"> Gardening
-        <input type="radio" name="Knitting"> Knitting
-        <input type="radio" name="Acting"> Acting
-        <input type="radio" name="Swimming"> Swimming
+    <td id="hobbies">
+        <input type="radio" name="Cooking" id="cooking"> Cooking
+        <input type="radio" name="Hiking" id="hiking"> Hiking
+        <input type="radio" name="Painting" id="painting"> Painting
+        <input type="radio" name="Sculpture" id="sculpture"> Sculpture
+        <input type="radio" name="Writing" id="writing"> Writing
+        <input type="radio" name="Running" id="running"> Running
+        <input type="radio" name="Dancing" id="dancing"> Dancing
+        <input type="radio" name="Yoga" id="yoga"> Yoga
+        <input type="radio" name="Meditating" id="meditating"> Meditating
+        <input type="radio" name="Reading" id="reading"> Reading
+        <input type="radio" name="Playing Video Games" id="payingVideoGames"> Playing Video Games
+        <input type="radio" name="Gardening" id="gardening"> Gardening
+        <input type="radio" name="Knitting" id="knitting"> Knitting
+        <input type="radio" name="Acting" id="acting"> Acting
+        <input type="radio" name="Swimming" id="swimming"> Swimming
     </td>
-   </tr>
-   <tr>
-    <td>Email :</td>
-    <td><input type="email"></td>
-   </tr>
-   <tr>
-    <td>Date Of Birth :</td>
-    <td><input type="date"></td>
    </tr>
    <tr>
     <td>Phone no :</td>
     <td>
-     <select>
+     <select id="phoneOptions">
       <option>+1</option>
       <option>+7</option>
       <option>+91</option>
@@ -80,7 +74,7 @@
       <option>+965</option>
       <option>+966</option>
      </select>
-     <input type="phone">
+     <input type="phone" id="phone">
     </td>
    </tr>
    <tr>
@@ -90,7 +84,7 @@
    <tr>
     <td>Country :</td>
     <td>
-     <select>
+     <select id="countryoptions">
       <option>India</option>
       <option>Australia</option>
       <option>Austria</option>
@@ -133,9 +127,11 @@
    </tr>
 
    <tr>
-    <td><input type="submit" value="Submit"></td>
+    <td><input type="submit" value="Submit" onclick="validate()"></td>
    </tr>
   </table>
  </form>
+ <h1 id="displayData"></h1>
 </body>
+<script src="js/registration_form.js"></script>
 </html>
