@@ -27,7 +27,7 @@
     <li>Start</li>
     <li>Initialize a queue with fixed size.</li>
     <li>Initialize the semaphore variables.</li>
-    <li>m = semaphore(1) -Indicate a Mutual Exclusion</li>
+    <li>m = semaphore(1) -->Indicate a Mutual Exclusion</li>
     <li>Both the producer and consumer acquire semaphore lock for mutex whenever enqueue or dequeue occurs.</li>
     <li>When Producer producing the data , decrement the semaphore m as obtained mutex i.e m--.</li>
     <li>When producer completes its job, increment the semaphore m as it exited from critical section i.e m++</li>
