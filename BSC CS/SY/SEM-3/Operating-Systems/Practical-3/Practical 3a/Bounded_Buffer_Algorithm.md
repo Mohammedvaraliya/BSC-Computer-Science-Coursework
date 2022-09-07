@@ -4,7 +4,9 @@
 
 <p>There is a buffer of n slots and each slot is capable of storing one unit of data. There are two processes running, namely, producer and consumer, which are operating on the buffer.</p>
 
+<center>
 <img src="https://static.studytonight.com/operating-system/images/bounded-buffer-problem.png" alt="Bounded Buffer Problem">
+</center>
 
 <p>Similarly,</p>
 
