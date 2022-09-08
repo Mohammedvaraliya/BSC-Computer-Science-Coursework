@@ -76,6 +76,3 @@ if __name__ =="__main__":
     burst_time = [10, 5, 8]
  
     findavgTime(processes, n, burst_time)
- 
-# This code is contributed
-# by ChitraNayal
