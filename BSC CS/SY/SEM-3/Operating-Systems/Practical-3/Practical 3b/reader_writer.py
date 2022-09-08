@@ -3,15 +3,18 @@ import random
 from threading import Semaphore
 import os
 
-global x                #Shared Data
+global x #Shared Data
+readerCount = 0
 x = 0
 lock = Semaphore(1)    #Lock for synchronising access
 
 def Reader():
-    global x
+    global x, readerCount
     lock.acquire()      #Acquire the lock before Reading (mutex approach)
     print('Reader is Reading!')
     print('Shared Data:', x)
+    readerCount += 1
+    print("Reader count is : ", readerCount)
     lock.release()      #Release the lock after Reading
     print()
 
