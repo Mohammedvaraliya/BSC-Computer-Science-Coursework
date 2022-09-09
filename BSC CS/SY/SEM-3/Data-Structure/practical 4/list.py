@@ -1,5 +1,4 @@
 # List implementation in python
-
 # Creating a List
 
 def create_list():
