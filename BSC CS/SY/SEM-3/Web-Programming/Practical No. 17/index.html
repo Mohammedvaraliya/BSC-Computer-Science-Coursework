@@ -10,11 +10,11 @@
   <table class="center">
    <tr>
     <td>Name :</td>
-    <td><input type="text" id="name" required></td>
+    <td><input type="text" id="name" onblur="allLetter()" onblur="required"></td>
    </tr>
    <tr>
     <td>Age :</td>
-    <td><input type="text" inputmode="numeric" id="age" required></td>
+    <td><input type="text" inputmode="numeric" id="age" onblur="age()"></td>
    </tr>
    <tr>
     <td>Email :</td>
@@ -54,26 +54,6 @@
    <tr>
     <td>Phone no :</td>
     <td>
-     <select id="phoneOptions">
-      <option>+1</option>
-      <option>+7</option>
-      <option>+91</option>
-      <option>+57</option>
-      <option>+45</option>
-      <option>+33</option>
-      <option>+47</option>
-      <option>+49</option>
-      <option>+852</option>
-      <option>+62</option>
-      <option>+98</option>
-      <option>+34</option>
-      <option>+81</option>
-      <option>+64</option>
-      <option>+960</option>
-      <option>+964</option>
-      <option>+965</option>
-      <option>+966</option>
-     </select>
      <input type="phone" id="phone">
     </td>
    </tr>
