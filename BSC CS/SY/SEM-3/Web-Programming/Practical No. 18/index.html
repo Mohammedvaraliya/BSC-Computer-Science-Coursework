@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practical 18 | S110 Varaliya Mohammed</title>
+  </head>
+  <body>
+    <h1>Cookie Saver</h1>
+
+    <label for="cookie-data">Enter something to store</label>
+    <input type="text" name="cookie-data" />
+    <button id="store-button">Store</button>
+    <button id="retrieve-button">Retrieve</button>
+    <p>Output :</p>
+    <script>
+      const storeButton = document.querySelector("#store-button");
+      const retrieveButton = document.querySelector("#retrieve-button");
+
+      storeButton.addEventListener("click", (e) => {
+        const input = document.querySelector("input").value;
+
+        document.cookie = input;
+
+        document.querySelector("input").value = "";
+      });
+
+      retrieveButton.addEventListener("click", (e) => {
+        const output = document.querySelector("input").value;
+
+        document.querySelector("p").innerText = document.cookie;
+      });
+    </script>
+  </body>
+</html>
