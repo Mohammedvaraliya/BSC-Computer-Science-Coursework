@@ -35,33 +35,6 @@ emailInput.addEventListener("blur", (e) => {
     }
 });
 
-dateOfBirthInput.addEventListener("blur", (e) => {
-    if (dateOfBirthInput.value == "") {
-        alert("Invalid Date Of Birth");
-    }
-});
-
-phoneInput.addEventListener("blur", (e) => {
-    if(phoneInput.value == ""){
-        alert('phone must have not empty')
-    }
-    else if(isNaN(phoneInput.value)){
-        alert("Phone Number should be valid")
-    }
-})
-
-addressInput.addEventListener("blur", (e) => {
-    if(addressInput.value == ""){
-        alert('address must have not empty')
-    }
-})
-
-serviceInput.addEventListener("blur", (e) => {
-    if(serviceInput.value == ""){
-        alert('sevice must have not empty')
-    }
-})
-
 
 form.addEventListener("submit", (e) => {
     let genderRadioButtons = document.querySelectorAll(`input[name="gender"]`);
@@ -78,6 +51,7 @@ form.addEventListener("submit", (e) => {
 
     if (gender === "") {
         alert("Please select a gender");
+        e.preventDefault();
       }
 
     hobbiesInput.forEach((element) => {
@@ -85,10 +59,10 @@ form.addEventListener("submit", (e) => {
     });
 
     if(hobbies.length < 3){
-        alert("Please select atleast 3 hobbies")
+        alert("Please select atleast 3 hobbies");
+        e.preventDefault();
     }
 
 });
-
 
 
