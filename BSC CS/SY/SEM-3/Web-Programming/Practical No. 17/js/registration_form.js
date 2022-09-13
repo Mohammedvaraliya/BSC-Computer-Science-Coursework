@@ -1,64 +1,94 @@
-// function validate() {
-//     if (allLetter(name)) {
-//         if (alphanumeric(address)) {
+console.log("Running")
 
-//         }
-
-//     }
-
-
-//     if (isNaN(age)) {
-//         alert("Please write a valid age");
-//     }
-
-//     else if (isNaN(phone)) {
-//         alert("Please write a valid phone number");
-//     }
+let nameInput = document.getElementById('name');
+let ageInput = document.getElementById('age');
+let emailInput = document.getElementById('email');
+let dateOfBirthInput = document.getElementById('dateOfBirth');
+let genderRadioButtons = document.querySelectorAll(`input[name="gender"]`);
+let hobbiesInput = document.querySelectorAll(`input[name="hobbies"]:checked`);
+let phoneInput = document.getElementById('phone');
+let addressInput = document.getElementById('address');
+let serviceInput = document.getElementById('service');
+let form = document.querySelector("form");
 
 
-// }
-
-let name = document.getElementById('name').value;
-let age = document.getElementById('age').value;
-let email = document.getElementById('email').value;
-let dateOfBirth = document.getElementById('dateOfBirth').value;
-let hobbies = document.getElementById('hobbies').value;
-// let phoneOptions = document.getElementById('phoneOptions').value;
-let phone = document.getElementById('phone').value;
-let address = document.getElementById('address').value;
-// let countryOptions = document.getElementById('countryOptions').value;
-let service = document.getElementById('service').value;
-
-function allLetter() {
-    let letters = /^[A-Za-z]+$/;
-    if (name.value == "") {
+nameInput.addEventListener("blur", (e) => {
+    let letters = /^[0-9A-Za-z]+$/g;
+    if (nameInput.value == "") {
         alert('Username must have not empty');
     }
-    else if (name.value.match(letters)) {
+    else if (nameInput.value.match(letters)) {
         return true;
     }
-    else {
-        alert('Username must have alphabet characters only');
-        name.focus();
-        return false;
+    
+})
+
+ageInput.addEventListener("blur", (e) => {
+    if (isNaN(ageInput.value)) {
+        alert("Please write a valid age");
     }
-}
+})
 
-function age() {
-    let age = document.getElementById('age').value;
-    if (isNaN(age)) {
-         alert("Please write a valid age");
-    }       
-}
+emailInput.addEventListener("blur", (e) => {
+    if (!/[0-9a-zA-Z\.].*\@[0-9a-zA-Z].*\.(com|in)/g.test(email.value)) {
+        alert("Invalid email");
+    }
+});
 
-// function alphanumeric(uadd) {
-//     var letters = /^[0-9a-zA-Z]+$/;
-//     if (uadd.value.match(letters)) {
-//         return true;
-//     }
-//     else {
-//         alert('User address must have alphanumeric characters only');
-//         uadd.focus();
-//         return false;
-//     }
-// }
+dateOfBirthInput.addEventListener("blur", (e) => {
+    if (dateOfBirthInput.value == "") {
+        alert("Invalid Date Of Birth");
+    }
+});
+
+phoneInput.addEventListener("blur", (e) => {
+    if(phoneInput.value == ""){
+        alert('phone must have not empty')
+    }
+    else if(isNaN(phoneInput.value)){
+        alert("Phone Number should be valid")
+    }
+})
+
+addressInput.addEventListener("blur", (e) => {
+    if(addressInput.value == ""){
+        alert('address must have not empty')
+    }
+})
+
+serviceInput.addEventListener("blur", (e) => {
+    if(serviceInput.value == ""){
+        alert('sevice must have not empty')
+    }
+})
+
+
+form.addEventListener("submit", (e) => {
+    let genderRadioButtons = document.querySelectorAll(`input[name="gender"]`);
+    let hobbiesInput = document.querySelectorAll(`input[name="hobbies"]:checked`);
+    let gender = "";
+    const hobbies = [];
+    
+    for (let radio of genderRadioButtons) {
+        if (radio.checked) {
+          gender = radio.value;
+          break;
+        }
+      }
+
+    if (gender === "") {
+        alert("Please select a gender");
+      }
+
+    hobbiesInput.forEach((element) => {
+        hobbies.push(element.value);
+    });
+
+    if(hobbies.length < 3){
+        alert("Please select atleast 3 hobbies")
+    }
+
+});
+
+
+
