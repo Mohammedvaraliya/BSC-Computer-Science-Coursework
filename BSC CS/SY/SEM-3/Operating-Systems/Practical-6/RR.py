@@ -61,10 +61,10 @@ def findavgTime(processes, n, bt, quantum):
 
 if __name__ =="__main__":
 	
-	proc = [1, 2, 3]
-	n = 3
+	proc = [1, 2, 3, 4]
+	n = len(proc)
 
-	burst_time = [10, 5, 8]
+	burst_time = [19, 3, 9, 5]
 
 	quantum = 2
 	findavgTime(proc, n, burst_time, quantum)

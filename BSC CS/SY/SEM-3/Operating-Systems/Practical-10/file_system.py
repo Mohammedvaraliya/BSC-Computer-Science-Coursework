@@ -9,13 +9,14 @@ print("4. Read from file ")
 print("5. Delete a file")
 print("\n")
 
+
 inputNo = int(input("Enter a number : "))
 
 if (inputNo == 1):
     input_fname = str(input("Please give a file name :  "))
     file = open(f"D:\\Practicals Performed\\BSC CS\\SY\\SEM-3\\Operating-Systems\\Practical-10\\Files Folder\\{input_fname}.txt", "a")
     file.close()
-    print("File crated successfully.")
+    print("File created successfully.")
 
 elif(inputNo == 2):
     input_fname = str(input("Please provide a file name where you want to write : "))
@@ -37,7 +38,7 @@ elif(inputNo == 3):
 elif(inputNo == 4):
     input_fname = str(input("Please provide a file name which you want to read : "))
     file = open(f"D:\\Practicals Performed\\BSC CS\\SY\\SEM-3\\Operating-Systems\\Practical-10\\Files Folder\\{input_fname}.txt", "r")
-    content = file.readline()
+    content = file.read()
     print(content)
     file.close()
     print("Successfully read the file.")
@@ -49,3 +50,4 @@ elif(inputNo == 5):
 
 elif(inputNo > 5):
     print("Please enter a valid input ")
+
