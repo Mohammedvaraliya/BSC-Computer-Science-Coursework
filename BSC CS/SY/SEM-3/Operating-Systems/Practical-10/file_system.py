@@ -18,7 +18,7 @@ if (inputNo == 1):
     print("File crated successfully.")
 
 elif(inputNo == 2):
-    input_fname = str(input("Please give a file name :  "))
+    input_fname = str(input("Please provide a file name where you want to write : "))
     input_Str = str(input("Please describe what you write in a file :  "))
     file = open(f"D:\\Practicals Performed\\BSC CS\\SY\\SEM-3\\Operating-Systems\\Practical-10\\Files Folder\\{input_fname}.txt", "w")
     file.write(input_Str)
@@ -27,7 +27,7 @@ elif(inputNo == 2):
 
 
 elif(inputNo == 3):
-    input_fname = str(input("Please give a file name :  "))
+    input_fname = str(input("Please provide a file name where you want to append data : "))
     input_Str = str(input("Please describe what you want to append in a file :  "))
     file = open(f"D:\\Practicals Performed\\BSC CS\\SY\\SEM-3\\Operating-Systems\\Practical-10\\Files Folder\\{input_fname}.txt", "a")
     file.write(input_Str)
@@ -35,7 +35,7 @@ elif(inputNo == 3):
     print("Successfully append in a file.")
 
 elif(inputNo == 4):
-    input_fname = str(input("Please give a file name :  "))
+    input_fname = str(input("Please provide a file name which you want to read : "))
     file = open(f"D:\\Practicals Performed\\BSC CS\\SY\\SEM-3\\Operating-Systems\\Practical-10\\Files Folder\\{input_fname}.txt", "r")
     content = file.readline()
     print(content)
@@ -45,7 +45,7 @@ elif(inputNo == 4):
 elif(inputNo == 5):
     inputFile = str(input("Please enter file name which you want to delete : "))
     os.remove(f"D:\\Practicals Performed\\BSC CS\\SY\\SEM-3\\Operating-Systems\\Practical-10\\Files Folder\\{inputFile}.txt")
-    print("Successfully delete the file.")
+    print("Successfully deleted the file.")
 
 elif(inputNo > 5):
     print("Please enter a valid input ")
