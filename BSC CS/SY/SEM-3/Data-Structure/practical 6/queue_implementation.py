@@ -1,18 +1,16 @@
-pq = []
+import queue
 
-pq.append((2, "A"))
-pq.append((3, "B"))
-pq.append((1, "C"))
-pq.append((7, "D"))
+q = queue.PriorityQueue()
+q.put(10)
+q.put(70)
+q.put(30)
+q.put(15)
+q.put(40)
+q.put(90)
 
-print(pq)
-
-pq.sort()
-print(pq)
-
-print(pq.pop())
-print(pq.pop())
-print(pq.pop())
-print(pq.pop())
-
-print(pq)
+print(q.get())
+print(q.get())
+print(q.get())
+print(q.get())
+print(q.get())
+print(q.get())
