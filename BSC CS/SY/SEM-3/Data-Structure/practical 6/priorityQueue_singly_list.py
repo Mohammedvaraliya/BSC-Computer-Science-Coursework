@@ -27,11 +27,9 @@ class PriorityQueue:
 
             else:
                 temp = self.front
-
                 while temp.next:
                     if priority <= temp.next.priority:
                         break
-
                     temp = temp.next
 
                 newNode = PriorityQueueNode(value, priority)
@@ -72,8 +70,13 @@ if __name__ == "__main__":
     pq.push(5, 2)
     pq.push(6, 3)
     pq.push(7, 0)
+    pq.push(9, 4)
 
     pq.traverse()
+    
+    print("\n")
 
     pq.pop()
+    
+    pq.traverse()
 
