@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurent</title>
+</head>
+
+<script language="javascript">
+    var XMLHttpRequestObject = false;
+
+    if (window.XMLHttpRequest) {
+        XMLHttpRequestObject = new XMLHttpRequest();
+    } else if (window.ActiveXObject) {
+        XMLHttpRequestObject = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+
+    function getData(dataSource, divID) {
+        if (XMLHttpRequestObject) {
+            var obj = document.getElementById(divID);
+            XMLHttpRequestObject.open("GET", dataSource);
+
+            XMLHttpRequestObject.onreadystatechange = function () {
+                if (XMLHttpRequestObject.readyState == 4 &&
+                    XMLHttpRequestObject.status == 200) {
+                    obj.innerHTML = XMLHttpRequestObject.responseText;
+                }
+            }
+            XMLHttpRequestObject.send(null);
+        }
+    }
+
+</script>
+
+<body>
+    <H1>Interactive mouseovers</H1>
+    <img src="./images/sandwithches.jpg" onmouseover="getData('./texts/sandwiches.txt', 'targetDiv' )"
+        style="height: 250px; width: 350px;">
+    <img src="./images/pizzas.jpg" onmouseover="getData('./texts/pizzas.txt', 'targetDiv')"
+        style="height: 250px; width: 350px;">
+    <img src="./images/soup.jpg" onmouseover="getData('./texts/soups.txt', 'targetDiv')" style="height: 250px; width: 350px;">
+
+
+    <div id="targetDiv">
+        <p>Welcome to my restaurant!</p>
+    </div>
+
+</body>
+
+</html>

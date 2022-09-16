@@ -1,0 +1,1 @@
+Create a webpage to fetch and display the contents of a text file on click of a button using XMLHttpRequestObject.
