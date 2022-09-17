@@ -58,4 +58,5 @@ class BST:
 
 
 if __name__ == "__main__":
+    
     BinarySearchTree.main([])
