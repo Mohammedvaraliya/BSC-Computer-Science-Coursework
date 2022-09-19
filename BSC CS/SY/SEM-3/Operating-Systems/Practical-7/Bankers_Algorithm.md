@@ -25,5 +25,5 @@
         then the system is in a safe state 
 8. if Finish [i] = True , Terminate the process.
 8. The process has to wait till the resources are available as per need.
-9. Repeat `(4)`, `(5)`, `(6)` and `(7)` till all the process completion.
+9. Repeat `(4)`, `(5)`, `(6)` and `(7)` till all the process complete.
 8. End
