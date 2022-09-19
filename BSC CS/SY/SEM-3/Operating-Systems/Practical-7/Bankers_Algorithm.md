@@ -14,14 +14,14 @@
 4. Let Work and Finish be vectors of length ‘m’ and ‘n’ respectively.
         Initialize: Work = Available 
         Finish[i] = false; for i=1, 2, 3, 4….n
-5. Find an process `Pi` such that both 
-        Finish[i] = false 
+5. Find an process `Pi` such that both <br>
+        Finish[i] = false <br>
         Needi <= Work
    if no such process `Pi` exists goto step `(7)`
-6. Work = Work + Allocation[i]
-        Finish[i] = true 
+6. Work = Work + Allocation[i] <br>
+        Finish[i] = true <br>
         goto step `(4)`
-7. If Finish [i] = True for all i 
+7. If Finish [i] = True for all i <br>
         then the system is in a safe state 
 8. if Finish [i] = True , Terminate the process.
 8. The process has to wait till the resources are available as per need.
