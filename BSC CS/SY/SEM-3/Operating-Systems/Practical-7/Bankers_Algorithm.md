@@ -11,8 +11,8 @@
 1. Start
 2. Initialize the processors and resources.
 3. Initialize an intances of each resources respectively.
-4. Let Work and Finish be vectors of length ‘m’ and ‘n’ respectively.
-        Initialize: Work = Available 
+4. Let Work and Finish be vectors of length ‘m’ and ‘n’ respectively <br>
+        Initialize: Work = Available <br>
         Finish[i] = false; for i=1, 2, 3, 4….n
 5. Find an process `Pi` such that both <br>
         Finish[i] = false <br>
