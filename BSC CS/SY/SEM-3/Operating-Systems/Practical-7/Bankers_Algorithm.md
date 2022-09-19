@@ -16,7 +16,7 @@
         Finish[i] = false; for i=1, 2, 3, 4….n
 5. Find an process `Pi` such that both <br>
         Finish[i] = false <br>
-        Needi <= Work
+        Needi <= Work 
    if no such process `Pi` exists goto step `(7)`
 6. Work = Work + Allocation[i] <br>
         Finish[i] = true <br>
