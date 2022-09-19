@@ -32,7 +32,7 @@ if __name__=="__main__":
 		for j in range(m):
 			need[i][j] = max[i][j] - alloc[i][j]
 	y = 0
-	for k in range(5):
+	for k in range(n):
 		for i in range(n):
 			if (f[i] == 0):
 				flag = 0
