@@ -8,7 +8,16 @@
     <title>Document</title>
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 <script>
+    $(document).ready(function () {
+        $("button").click(function () {
+            var div = $("div");
+            div.animate({ left: '500px' }, "slow");
+            div.animate({ fontSize: '4em' }, "fast");
+        });
+    });
+
     $(document).ready(function () {
         $("button").click(function () {
             $("div").toggle("slow");
@@ -25,13 +34,10 @@
 
     <button>Start Animation</button>
 
-    <p style="position: relative;">By default, all HTML elements have a static position, and cannot be moved. To
-        manipulate the position, remember
-        to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+    <h4>We're all humans living on this tiny little rock, floating through space at, like, thousands of miles an hour.
+        We should all just get along!</h4>
 
-    <div style="background:#ff9100;height:100px;width:100px;position:absolute;">
-        <h1>S110</h1>
-    </div>
+    <div style="background:#98bf21;height:200px;width:300px;position:absolute;">S110 Varaliya</div>
 
 </body>
 
