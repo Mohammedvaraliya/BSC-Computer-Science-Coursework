@@ -6,18 +6,19 @@ import os
 global x  #Shared Data
 x = 0
 readerCount = 0
-lock = Semaphore(1)    #Lock for synchronising access
+lock = Semaphore(1)
+lock_for_reader = Semaphore(2)
 
 def Reader():
     global x, readerCount
-    lock.acquire()      #Acquire the lock before Reading (mutex approach)   
+    lock_for_reader.acquire()      #Acquire the lock before Reading (mutex approach)   
     print('Reader is Reading!')
     x = open("C:\\Users\\varal\\Documents\\readme.txt", "r")
     print(x.read())
     readerCount += 1
     print("Reader count is : ", readerCount)
     print("Reader finishes his reading")
-    lock.release()      #Release the lock after Reading
+    lock_for_reader.release()      #Release the lock after Reading
     print()
 
 def Writer():
