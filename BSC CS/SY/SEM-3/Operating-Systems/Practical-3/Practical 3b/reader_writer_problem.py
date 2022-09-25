@@ -15,6 +15,7 @@ def Reader():
     print('Reader is Reading!')
     x = open("C:\\Users\\varal\\Documents\\readme.txt", "r")
     print(x.read())
+    x.close()
     readerCount += 1
     print("Reader count is : ", readerCount)
     print("Reader finishes his reading")
