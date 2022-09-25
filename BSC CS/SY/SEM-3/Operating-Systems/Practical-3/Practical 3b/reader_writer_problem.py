@@ -8,6 +8,7 @@ x = 0
 readerCount = 0
 lock = Semaphore(1)
 lock_for_reader = Semaphore(2)
+
 current_directory = os.getcwd()
 final_directory = os.path.join(current_directory, r'dummy_folder')
 if not os.path.exists(final_directory):
