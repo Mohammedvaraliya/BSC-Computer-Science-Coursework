@@ -8,12 +8,16 @@ x = 0
 readerCount = 0
 lock = Semaphore(1)
 lock_for_reader = Semaphore(2)
+current_directory = os.getcwd()
+final_directory = os.path.join(current_directory, r'dummy_folder')
+if not os.path.exists(final_directory):
+   os.makedirs(final_directory)
 
 def Reader():
-    global x, readerCount
+    global x, readerCount, final_directory
     lock_for_reader.acquire()      #Acquire the lock before Reading (mutex approach)   
     print('Reader is Reading!')
-    x = open("C:\\Users\\varal\\Documents\\readme.txt", "r")
+    x = open(f"{final_directory}\\readme.txt", "r")
     print(x.read())
     x.close()
     readerCount += 1
@@ -23,10 +27,10 @@ def Reader():
     print()
 
 def Writer():
-    global x
+    global x, final_directory
     lock.acquire()      #Acquire the lock before Writing
     print('Writer is Writing!')
-    x = open("C:\\Users\\varal\\Documents\\readme.txt", 'w')  #Write the data on file
+    x = open(f"{final_directory}\\readme.txt", 'w')  #Write the data on file
     for n in range(0, 2):
         x.write(str(random.randint(0, 10000)))
         x.write(",")
