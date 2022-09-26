@@ -10,16 +10,16 @@
     <h1>Cookie Saver</h1>
 
     <label for="cookie-data">Enter something to store</label>
-    <input type="text" name="cookie-data" />
+    <input type="text" name="cookie-data" id="inputText" />
     <button id="store-button">Store</button>
     <button id="retrieve-button">Retrieve</button>
-    <p>Output :</p>
+    <p id="output">output here : </p>
     <script>
       const storeButton = document.querySelector("#store-button");
       const retrieveButton = document.querySelector("#retrieve-button");
 
       storeButton.addEventListener("click", (e) => {
-        const input = document.querySelector("input").value;
+        const input = document.querySelector("#inputText").value;
 
         document.cookie = input;
 
@@ -27,9 +27,11 @@
       });
 
       retrieveButton.addEventListener("click", (e) => {
-        const output = document.querySelector("input").value;
+        const output = document.querySelector("#inputText").value;
 
-        document.querySelector("p").innerText = document.cookie;
+        document.querySelector("#output").innerHTML = document.cookie;
+        
+
       });
     </script>
   </body>
