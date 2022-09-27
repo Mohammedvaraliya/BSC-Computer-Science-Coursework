@@ -17,13 +17,17 @@
         <p><b>Implementing setTimeout and cleartimeOut function</b></p><br>
         <table>
         <tr>
-            <td><h3>Click to get the popup box after 3 seconds :</h3></td>
+            <td><h3>Click to Increment the value of Counter by 1 :</h3></td>
             <td><button onclick="setTimeOutfunc()">Click ME</button></td>
         </tr>
         <br>
         <tr>
-            <td><h3>Click to stop the popup box to display after 3 seconds :</h3></td>
+            <td><h3>Click to stop the Counter :</h3></td>
             <td><button onclick="stopTimeOutFunction()">Click ME</button></td>
+        </tr>
+        <tr>
+            <td><h1>Counter : </h1></td>
+            <td><h1 id="counter"></h1></td>
         </tr>
         
     </table>
@@ -31,13 +35,17 @@
 </body>
 <script>
     let timeout;
+    let counter = 0;
 
     function setTimeOutfunc() {
-        timeout = setTimeout(greetingfunc, 3000);
+        timeout = setTimeout(counterFunc, 100);
     }
 
-    function greetingfunc() {
-        alert("Have a Nice Day!")
+    function counterFunc() {
+        let ctr = document.getElementById("counter");
+        counter++;
+        ctr.innerHTML = counter;
+        setTimeOutfunc();
 
     }
 
