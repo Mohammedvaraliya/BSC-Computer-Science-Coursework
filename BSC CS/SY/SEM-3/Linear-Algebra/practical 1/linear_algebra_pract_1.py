@@ -11,7 +11,6 @@ print("Conjugate of a given complex number is : ", a.conjugate())
 
 # 3. Plotting a set of complex numbers
 import matplotlib.pyplot as plot
-x = 2+2j
 a = [-4+3j, -2+1j, -5+3.5j, 0+2j, 1+1.5j]
 X = [x.real for x in a]
 Y = [x.imag for x in a]

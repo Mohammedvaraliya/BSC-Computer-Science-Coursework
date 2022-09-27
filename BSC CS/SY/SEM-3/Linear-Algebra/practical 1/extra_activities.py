@@ -33,7 +33,6 @@ print(x.conjugate())
 
 # 7. Plot S = {3+3i, 4+3i, 2+i, 2.5+i, 3+i, 3.25+i}
 import matplotlib.pyplot as plot
-x = 2+2j
 S = [3+3j, 4+3j, 2+1j, 2.5+1j, 3+1j, 3.25+1j]
 X = [x.real for x in S]
 Y = [x.imag for x in S]
