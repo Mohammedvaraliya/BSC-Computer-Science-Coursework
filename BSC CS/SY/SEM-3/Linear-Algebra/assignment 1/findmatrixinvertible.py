@@ -3,7 +3,8 @@
 # invertible example
 import numpy as np
 
-matrix = np.array([[5,1], [10,2]])
+matrix = np.array([[5,1],
+                   [10,2]])
 print("Matrix M = ")
 print(matrix)
 
@@ -21,7 +22,8 @@ else:
 # Non-invertible example
 import numpy as np
 
-matrix = np.array([[5,2], [10,3]])
+matrix = np.array([[5,2],
+                   [10,3]])
 print("Matrix M = ")
 print(matrix)
 
