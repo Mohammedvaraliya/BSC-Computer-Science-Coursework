@@ -18,16 +18,16 @@ print("Multiplication of two matrix a and b is : ")
 print(a*b)
 
 # Check if matrix is invertible. 
-matrix = np.array([[5,7], [2,3]])
+M = np.array([[5,7], [2,3]])
 
 print("Matrix M = ")
-print(matrix)
+print(M)
 
-c = np.linalg.det(matrix)
+c = np.linalg.det(M)
 print("Determinant = ", c)
 
 if(c != 0):
-    i = np.linalg.inv(matrix)
+    i = np.linalg.inv(M)
     print("Inverse of Matrix M = ")
     print(i)
 else:
