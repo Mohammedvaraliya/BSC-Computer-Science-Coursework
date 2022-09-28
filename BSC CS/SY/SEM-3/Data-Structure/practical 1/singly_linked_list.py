@@ -1,145 +1,116 @@
-# Linked list operations in Python
-
-# Create a node
 class Node:
     def __init__(self, data):
         self.data = data
         self.next = None
 
 
-class LinkedList:
-
+class SinglyLinkedList:
     def __init__(self):
         self.head = None
 
-    # Insert at the beginning
-    def insertAtBeginning(self, new_data):
-        new_node = Node(new_data)
-
-        new_node.next = self.head
-        self.head = new_node
-
-    # Insert after a node
-    def insertAfter(self, prev_node, new_data):
-
-        if prev_node is None:
-            print("The given previous node must inLinkedList.")
-            return
-
-        new_node = Node(new_data)
-        new_node.next = prev_node.next
-        prev_node.next = new_node
-
-    # Insert at the end
-    def insertAtEnd(self, new_data):
-        new_node = Node(new_data)
+    def append(self, data):
+        new_node = Node(data)
 
         if self.head is None:
             self.head = new_node
             return
 
-        last = self.head
-        while (last.next):
-            last = last.next
+        last_node = self.head
+        while last_node.next:
+            last_node = last_node.next
+        last_node.next = new_node
 
-        last.next = new_node
-
-    # Deleting a node
-    def deleteNode(self, position):
+    def prepend(self, data):
+        new_node = Node(data)
 
         if self.head is None:
+            self.head = new_node
             return
 
-        temp = self.head
+        cur_node = self.head
+        self.head = new_node
+        new_node.next = cur_node
 
-        if position == 0:
-            self.head = temp.next
-            temp = None
+    def insert_after(self, key, data):
+        cur = self.head
+        while cur:
+            if cur.next is None and cur.data == key:
+                self.append(data)
+                return
+            elif cur.data == key:
+                new_node = Node(data)
+                nxt = cur.next
+                new_node.next = nxt
+                cur.next = new_node
+            cur = cur.next
+
+        if cur is None:
+            print("Previous Node is not present in the list")
             return
 
-        # Find the key to be deleted
-        for i in range(position - 1):
-            temp = temp.next
-            if temp is None:
-                break
+    def delete_node(self, key):
 
-        # If the key is not present
-        if temp is None:
+        # Case 1
+        cur_node = self.head
+        if cur_node and cur_node.data == key:
+            self.head = cur_node.next
+            cur_node = None
             return
 
-        if temp.next is None:
+        # Case 2
+        prev = None
+        while cur_node and cur_node.data != key:
+            prev = cur_node
+            cur_node = cur_node.next
+
+        if cur_node is None:
+            print("The Node is not present in the list")
             return
 
-        next = temp.next.next
+        prev.next = cur_node.next
+        cur_node = None
 
-        temp.next = None
-
-        temp.next = next
-
-    # Search an element
-    def search(self, key):
-
-        current = self.head
-
-        while current is not None:
-            if current.data == key:
-                return True
-
-            current = current.next
-
-        return False
-
-    # Sort the linked list
-    def sortLinkedList(self, head):
-        current = head
-        index = Node(None)
-
-        if head is None:
+    def delete_node_at_pos(self, pos):
+        cur_node = self.head
+        if pos == 0:
+            self.head = cur_node.next
+            cur_node = None
             return
-        else:
-            while current is not None:
-                # index points to the node next to current
-                index = current.next
 
-                while index is not None:
-                    if current.data > index.data:
-                        current.data, index.data = index.data, current.data
+        prev = None
+        count = 0
+        while cur_node and count != pos:
+            prev = cur_node
+            count += 1
+            cur_node = cur_node.next
 
-                    index = index.next
-                current = current.next
+        if cur_node is None:
+            print("The Node is not present in the list")
+            return
 
-    # Print the linked list
-    def printList(self):
-        temp = self.head
-        while (temp):
-            print(str(temp.data) + "-->", end=" ")
-            temp = temp.next
+        prev.next = cur_node.next
+        cur_node = None
 
+    def print_list(self):
+        cur_node = self.head
+        while cur_node:
+            print(cur_node.data)
+            cur_node = cur_node.next
 
-if __name__ == '__main__':
+    
+if __name__ == "__main__":
 
-    llist = LinkedList()
-    llist.insertAtEnd(1)
-    llist.insertAtBeginning(2)
-    llist.insertAtBeginning(3)
-    llist.insertAtEnd(4)
-    llist.insertAfter(llist.head.next, 5)
+    llist = SinglyLinkedList()
+    llist.append("A")
+    llist.append("B")
+    llist.append("C")
+    llist.append("D")
 
-    print('linked list:')
-    llist.printList()
+    llist.insert_after("D", "S")
 
-    print("\nAfter deleting an element:")
-    n = 0
-    llist.deleteNode(n)
-    llist.printList()
+    llist.prepend("E")
 
-    print()
-    item_to_find = n
-    if llist.search(item_to_find):
-        print(str(item_to_find) + " is found")
-    else:
-        print(str(item_to_find) + " is not found")
+    llist.delete_node("A")
+    llist.delete_node_at_pos(1)
 
-    llist.sortLinkedList(llist.head)
-    print("Sorted List: ")
-    llist.printList()
+    llist.print_list()
