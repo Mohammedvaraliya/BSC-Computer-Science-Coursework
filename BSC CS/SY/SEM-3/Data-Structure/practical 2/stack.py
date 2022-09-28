@@ -16,9 +16,11 @@ class Stack:
         print("Popping item : ", pop)
         return pop
         
-
     def display_stack(self):
         print(self.stack)
+
+    def size_of_stack(self):
+        print(len(self.stack))
 
 if __name__ == "__main__":
     stack = Stack()
@@ -31,3 +33,5 @@ if __name__ == "__main__":
 
     stack.pop()
     stack.display_stack()
+
+    stack.size_of_stack()
