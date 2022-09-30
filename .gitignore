@@ -1,3 +1,6 @@
 # Ignore all the java class files
 
 *.class
+/BSC CS/SY/SEM-3/Java/java pract 7/Prac7b/build/
+/BSC CS/SY/SEM-3/Java/java pract 7/Prac7b/dist/
+/BSC CS/SY/SEM-3/Java/java pract 7/Prac7b/nbproject/private/
