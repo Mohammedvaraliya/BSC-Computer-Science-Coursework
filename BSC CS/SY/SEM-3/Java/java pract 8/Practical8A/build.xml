@@ -7,8 +7,8 @@
 <!-- the Compile on Save feature is turned off for the project. -->
 <!-- You can turn off the Compile on Save (or Deploy on Save) setting -->
 <!-- in the project's Project Properties dialog box.-->
-<project name="ServletPractical8a" default="default" basedir=".">
-    <description>Builds, tests, and runs the project ServletPractical8a.</description>
+<project name="Practical8A" default="default" basedir=".">
+    <description>Builds, tests, and runs the project Practical8A.</description>
     <import file="nbproject/build-impl.xml"/>
     <!--
 
