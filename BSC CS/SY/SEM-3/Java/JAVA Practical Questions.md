@@ -1,5 +1,8 @@
 <h1>JAVA Practical Questions</h1>
 
+
+
+
 ## Practical 1
 
 1. Write a program to create a class and implement the concepts of Constructor Overloading, Method Overloading, Static methods.
