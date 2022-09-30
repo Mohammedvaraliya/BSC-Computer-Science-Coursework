@@ -1,6 +1,5 @@
 <h1>JAVA Practical Questions</h1>
 <br>
-<br>
 
 ## Practical 1
 
