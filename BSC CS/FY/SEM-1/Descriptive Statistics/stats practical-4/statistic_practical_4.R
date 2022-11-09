@@ -5,6 +5,7 @@
 # is a measure of how far apart the entire data spreads in value.
 #  Find the range of the eruption duration in the data set faithful.
 
+
 duration = faithful$eruptions
 max(duration) - min(duration)
 
