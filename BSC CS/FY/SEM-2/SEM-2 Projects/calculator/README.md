@@ -12,3 +12,5 @@ A nice looking python calculator using the tkinter module.
 ![image](https://user-images.githubusercontent.com/95087498/174279441-68b85e24-3b5c-430e-9bdb-896cb16994b1.png)
 
 # Thank you!
+
+I really appreciate all kinds of feedback and contributions. Please feel free to contribute in this project to learn or improve this.

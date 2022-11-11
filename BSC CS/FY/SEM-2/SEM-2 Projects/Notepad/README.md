@@ -30,4 +30,5 @@ Python3
 
 # Thank you!
 
+I really appreciate all kinds of feedback and contributions. Please feel free to contribute in this project to learn or improve this.
 
