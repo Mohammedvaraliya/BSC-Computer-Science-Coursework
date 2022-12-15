@@ -1,0 +1,62 @@
+<div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h1>Angular project Form Validation</h1>
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" #regForm="ngForm">
+  
+          <div class="form-group mt-3">
+            <label for="firstname">First Name: </label>
+            <input type="text" formControlName="firstName" class="form-control"
+              [ngClass]="{ 'is-invalid': (submitted || f['firstName'].touched)  && f['firstName'].errors }" />
+            <div *ngIf="(submitted || f['firstName'].touched)  && f['firstName'].errors" class="text-danger">
+              <div *ngIf="(submitted || f['firstName'].touched)  && f['firstName'].errors?.['required']">
+                First Name required
+              </div>
+            </div>
+          </div>
+  
+          <div class="form-group mt-3">
+            <label for="lastname">Last Name: </label>
+            <input type="text" class="form-control" formControlName="lastName"
+              [ngClass]="{ 'is-invalid': (submitted || f['lastName'].touched)  && f['lastName'].errors }" />
+              <div *ngIf="(submitted || f['lastName'].touched)  && f['lastName'].errors" class="text-danger">
+                <div *ngIf="(submitted || f['lastName'].touched)  && f['lastName'].errors?.['required']">
+                  Last Name required
+                </div>
+              </div>
+          </div>
+  
+          <div class="form-group mt-3">
+            <label for="emailaddress">Email Address: </label>
+            <input type="text" class="form-control" formControlName="emailAddress" [ngClass]="{ 'is-invalid': (submitted || f['emailAddress'].touched)  && f['emailAddress'].errors }" />
+            <div *ngIf="(submitted || f['emailAddress'].touched)  && f['emailAddress'].errors" class="text-danger">
+              <div *ngIf="(submitted || f['emailAddress'].touched)  && f['emailAddress'].errors?.['required']">
+                Email is required
+              </div>
+              <div *ngIf="(submitted || f['emailAddress'].touched)  && f['emailAddress'].errors?.['email']">
+                Enter valid email
+              </div>
+            </div>
+          </div>
+  
+          <div class="form-group mt-3">
+            <label for="password">Password: </label>
+            <input type="text" class="form-control" formControlName="password" [ngClass]="{ 'is-invalid': (submitted || f['password'].touched)  && f['password'].errors }" />
+            <div *ngIf="(submitted || f['password'].touched)  && f['password'].errors" class="text-danger">
+              <div *ngIf="(submitted || f['password'].touched)  && f['password'].errors?.['required']">
+                Password is required
+              </div>
+              <div *ngIf="(submitted || f['password'].touched)  && f['password'].errors?.['minlength']">
+                Password should be atleast 8 characters
+              </div>
+            </div>
+          </div>
+  
+          <div class="form-group mt-3">
+            <button class="btn btn-primary">Register</button>
+          </div>
+  
+        </form>
+      </div>
+    </div>
+  </div>
