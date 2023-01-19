@@ -1,0 +1,216 @@
+Please enter a MongoDB connection string (Default: mongodb://localhost/):
+
+Current Mongosh Log ID: 63c82ccb38eff4eb62c999cd
+Connecting to:          mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.6.2
+Using MongoDB:          6.0.2
+Using Mongosh:          1.6.2
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2023-01-12T23:35:53.900+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+------
+
+------
+   Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+   metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+   The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+   and anyone you share the URL with. MongoDB may use this information to make product
+   improvements and to suggest MongoDB products and deployment options to you.
+
+   To enable free monitoring, run the following command: db.enableFreeMonitoring()
+   To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+------
+
+test> show dbs
+test>
+admin                40.00 KiB
+test>
+local                72.00 KiB
+test>
+varaliya             80.00 KiB
+test>
+
+test> use pract-02-mongodb
+switched to db pract-02-mongodb
+pract-02-mongodb>
+
+pract-02-mongodb> show dbs
+AllYouNeedNotebook  180.00 KiB
+admin                40.00 KiB
+config              108.00 KiB
+local                72.00 KiB
+test                148.00 KiB
+varaliya             80.00 KiB
+pract-02-mongodb>
+
+pract-02-mongodb>
+AllYouNeedNotebook  180.00 KiB
+pract-02-mongodb>
+config              108.00 KiB
+pract-02-mongodb>
+test                148.00 KiB
+pract-02-mongodb>
+
+pract-02-mongodb>
+
+pract-02-mongodb>
+
+pract-02-mongodb>
+
+pract-02-mongodb>
+pract-02-mongodb
+pract-02-mongodb>
+
+pract-02-mongodb> show collections
+
+pract-02-mongodb> show dbs
+AllYouNeedNotebook  180.00 KiB
+admin                40.00 KiB
+config              108.00 KiB
+local                72.00 KiB
+test                148.00 KiB
+varaliya             80.00 KiB
+pract-02-mongodb>
+
+pract-02-mongodb> show collections
+
+pract-02-mongodb>
+
+pract-02-mongodb> db.testdata.insertOne({name:"John Doe",})
+{
+  acknowledged: true,
+  insertedId: ObjectId("63c8304bd683648215ed4953")
+}
+pract-02-mongodb> db.testdata.insertOne({name:"John Doe", age:"20"})
+{
+  acknowledged: true,
+  insertedId: ObjectId("63c8307ed683648215ed4954")
+}
+pract-02-mongodb> db.testdata.insertOne({name:"John Doe", age:20, citizen:"India"})
+{
+  acknowledged: true,
+  insertedId: ObjectId("63c830d9d683648215ed4955")
+}
+pract-02-mongodb> show dbs
+AllYouNeedNotebook  180.00 KiB
+admin                40.00 KiB
+config              108.00 KiB
+local                72.00 KiB
+pract-02-mongodb     72.00 KiB
+test                148.00 KiB
+varaliya             80.00 KiB
+pract-02-mongodb>
+
+pract-02-mongodb> db
+pract-02-mongodb
+pract-02-mongodb>
+
+pract-02-mongodb> show collections
+testdata
+pract-02-mongodb>
+
+pract-02-mongodb> db.testdata.find()
+[
+  { _id: ObjectId("63c8304bd683648215ed4953"), name: 'John Doe' },
+  {
+    _id: ObjectId("63c8307ed683648215ed4954"),
+    name: 'John Doe',
+    age: '20'
+  },
+  {
+    _id: ObjectId("63c830d9d683648215ed4955"),
+    name: 'John Doe',
+    age: 20,
+    citizen: 'India'
+  }
+pract-02-mongodb>
+[
+pract-02-mongodb>
+  {
+pract-02-mongodb>
+    name: 'John Doe',
+pract-02-mongodb>
+  },
+pract-02-mongodb>
+    _id: ObjectId("63c830d9d683648215ed4955"),
+pract-02-mongodb>
+    age: 20,
+pract-02-mongodb>
+  }
+pract-02-mongodb>
+
+pract-02-mongodb>
+
+pract-02-mongodb>
+
+pract-02-mongodb>
+
+pract-02-mongodb>
+
+pract-02-mongodb>
+
+pract-02-mongodb>
+
+pract-02-mongodb>
+
+pract-02-mongodb>
+
+pract-02-mongodb>
+
+pract-02-mongodb>
+
+pract-02-mongodb>
+
+pract-02-mongodb>
+
+pract-02-mongodb>
+
+pract-02-mongodb>
+
+pract-02-mongodb>
+
+pract-02-mongodb> clear
+ReferenceError: clear is not defined
+pract-02-mongodb>
+
+pract-02-mongodb> db.testdata.insertMany([{name:"John Doe", age:20, citizen:"India"}, {name:"John", age:22, citizen:"US"}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("63c83270d683648215ed4956"),
+    '1': ObjectId("63c83270d683648215ed4957")
+  }
+}
+pract-02-mongodb> db.testdata.find()
+[
+  { _id: ObjectId("63c8304bd683648215ed4953"), name: 'John Doe' },
+  {
+    _id: ObjectId("63c8307ed683648215ed4954"),
+    name: 'John Doe',
+    age: '20'
+  },
+  {
+    _id: ObjectId("63c830d9d683648215ed4955"),
+    name: 'John Doe',
+    age: 20,
+    citizen: 'India'
+  },
+  {
+    _id: ObjectId("63c83270d683648215ed4956"),
+    name: 'John Doe',
+    age: 20,
+    citizen: 'India'
+  },
+  {
+    _id: ObjectId("63c83270d683648215ed4957"),
+    name: 'John',
+    age: 22,
+    citizen: 'US'
+  }
+]
+pract-02-mongodb>
+
+pract-02-mongodb>

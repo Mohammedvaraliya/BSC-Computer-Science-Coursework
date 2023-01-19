@@ -1,0 +1,98 @@
+test>
+
+
+test> show dbs
+AllYouNeedNotebook  180.00 KiB
+admin                40.00 KiB
+config               60.00 KiB
+local                72.00 KiB
+pract-02-mongodb     72.00 KiB
+test                148.00 KiB
+varaliya             80.00 KiB
+test>
+
+test> use pract-02-mongodb
+switched to db pract-02-mongodb
+pract-02-mongodb>
+
+pract-02-mongodb> db
+pract-02-mongodb>
+pract-02-mongodb>
+
+pract-02-mongodb> show collections
+testdata
+pract-02-mongodb>
+
+pract-02-mongodb> db.testdata.find()
+[
+  { _id: ObjectId("63c8304bd683648215ed4953"), name: 'John Doe' },
+  {
+    _id: ObjectId("63c8307ed683648215ed4954"),
+    name: 'John Doe',
+    age: '20'
+  },
+  {
+    _id: ObjectId("63c830d9d683648215ed4955"),
+    name: 'John Doe',
+    age: 20,
+    citizen: 'India'
+  },
+  {
+    _id: ObjectId("63c83270d683648215ed4956"),
+    name: 'John Doe',
+    age: 20,
+    citizen: 'India'
+  },
+  {
+    _id: ObjectId("63c83270d683648215ed4957"),
+    name: 'John',
+    age: 22,
+    citizen: 'US'
+  }
+]
+pract-02-mongodb>
+
+
+
+pract-02-mongodb> db.testdata.updateOne({name: "John Doe"}, {$set: {age: 30}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+pract-02-mongodb>
+
+pract-02-mongodb> db.testdata.find()
+[
+  {
+    _id: ObjectId("63c8304bd683648215ed4953"),
+    name: 'John Doe',
+    age: 30
+  },
+  {
+    _id: ObjectId("63c8307ed683648215ed4954"),
+    name: 'John Doe',
+    age: '20'
+  },
+  {
+    _id: ObjectId("63c830d9d683648215ed4955"),
+    name: 'John Doe',
+    age: 20,
+    citizen: 'India'
+  },
+  {
+    _id: ObjectId("63c83270d683648215ed4956"),
+    name: 'John Doe',
+    age: 20,
+    citizen: 'India'
+  },
+  {
+    _id: ObjectId("63c83270d683648215ed4957"),
+    name: 'John',
+    age: 22,
+    citizen: 'US'
+  }
+]
+pract-02-mongodb>

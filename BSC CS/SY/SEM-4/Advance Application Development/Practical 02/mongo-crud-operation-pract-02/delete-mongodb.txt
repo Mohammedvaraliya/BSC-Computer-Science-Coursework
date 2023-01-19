@@ -1,0 +1,88 @@
+pract-02-mongodb> show dbs
+AllYouNeedNotebook  180.00 KiB
+admin                40.00 KiB
+config              108.00 KiB
+local                72.00 KiB
+pract-02-mongodb     72.00 KiB
+test                148.00 KiB
+varaliya             80.00 KiB
+pract-02-mongodb>
+
+pract-02-mongodb> use pract-02-mongodb
+already on db pract-02-mongodb
+pract-02-mongodb>
+
+pract-02-mongodb> db
+pract-02-mongodb
+pract-02-mongodb>
+
+pract-02-mongodb> show collections
+testdata
+pract-02-mongodb>
+
+pract-02-mongodb> db.testdata.find()
+[
+  {
+    _id: ObjectId("63c8304bd683648215ed4953"),
+    name: 'John Doe',
+    age: 30
+  },
+  {
+    _id: ObjectId("63c8307ed683648215ed4954"),
+    name: 'John Doe',
+    age: '20'
+  },
+  {
+    _id: ObjectId("63c830d9d683648215ed4955"),
+    name: 'John Doe',
+    age: 20,
+    citizen: 'India'
+  },
+  {
+    _id: ObjectId("63c83270d683648215ed4956"),
+    name: 'John Doe',
+    age: 20,
+    citizen: 'India'
+  },
+  {
+    _id: ObjectId("63c83270d683648215ed4957"),
+    name: 'John',
+    age: 22,
+    citizen: 'US'
+  }
+]
+pract-02-mongodb>
+
+
+pract-02-mongodb> db.testdata.deleteMany({age: 20})
+{ acknowledged: true, deletedCount: 2 }
+pract-02-mongodb>
+
+pract-02-mongodb> db.testdata.find()
+[
+  {
+    _id: ObjectId("63c8304bd683648215ed4953"),
+    name: 'John Doe',
+    age: 30
+  },
+  {
+    _id: ObjectId("63c8307ed683648215ed4954"),
+    name: 'John Doe',
+    age: '20'
+  },
+  {
+    _id: ObjectId("63c83270d683648215ed4957"),
+    name: 'John',
+    age: 22,
+    citizen: 'US'
+  }
+]
+pract-02-mongodb>
+
+
+
+pract-02-mongodb> db.testdata.deleteMany({})
+{ acknowledged: true, deletedCount: 3 }
+pract-02-mongodb> db.testdata.find()
+
+pract-02-mongodb>
