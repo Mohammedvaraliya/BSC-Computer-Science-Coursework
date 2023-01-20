@@ -16,3 +16,7 @@
 ## Practical 4
 
 * Write a program to create and implement modules and controllers in Angular JS
+
+## Practical 5
+
+* Write a program to implement Error Handling in Angular JS
