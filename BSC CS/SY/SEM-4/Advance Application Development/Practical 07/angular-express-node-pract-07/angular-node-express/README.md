@@ -565,7 +565,7 @@ To start the application run `npm run both` start in development mode.
 ## Project Overview
 
 
+![angular-project-07](https://user-images.githubusercontent.com/95087498/214875700-deebb2c4-911f-47c0-ae76-e5bd3ff8825e.gif)
 
-https://user-images.githubusercontent.com/95087498/214866523-bed758f3-2700-4e65-906c-5a8753be109c.mp4
 
 
