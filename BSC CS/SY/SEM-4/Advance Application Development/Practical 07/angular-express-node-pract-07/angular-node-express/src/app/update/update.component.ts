@@ -2,22 +2,21 @@ import { Component } from '@angular/core';
 import { ApiservicesService } from '../apiservices.service';
 
 @Component({
-  selector: 'app-create',
-  templateUrl: './create.component.html',
-  styleUrls: ['./create.component.css']
+  selector: 'app-update',
+  templateUrl: './update.component.html',
+  styleUrls: ['./update.component.css']
 })
-export class CreateComponent {
-
+export class UpdateComponent {
   student = { rollNo: '', name: '', password: '' };
 
-  constructor(private createService: ApiservicesService) { }
+  constructor(private updateService: ApiservicesService) { }
 
   onSubmit() {
-    this.createService.registerStudent(this.student)
+    this.updateService.updateStudent(this.student.rollNo, this.student.password, this.student)
       .subscribe(
         (response) => { 
           console.log(response);
-          alert("Student record added successfully!");
+          alert("Student record updated successfully!");
         },
         (error) => { 
           console.log(error);

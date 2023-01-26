@@ -1,9 +1,12 @@
 import express from "express";
 import bodyParser from "body-parser";
+import cors from 'cors';
 
 const data = {};
-
 const app = express();
+
+app.use(cors());
+
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -31,6 +34,13 @@ app.post("/student", (request, response) => {
     return response.json({ message: "Student already exist" });
   }
 
+  // Empty
+  if (!student.rollNo && !student.name && !student.password) {
+    response.statusCode = 400;
+    return response.json({ message: "Missing required fields" });
+  }
+
+
   // Add record to memory
   data[request.body.rollNo] = request.body;
 
@@ -44,15 +54,16 @@ app.get("/student", (request, response) => {
   // Check if record exists
   if (data[rollNo]) {
     response.statusCode = 200;
-    return response.send(data[rollNo]);
+    response.json({ body:data[rollNo] });
+
   }
 
   response.statusCode = 404;
-  response.send("Data not found");
+  response.json({ message: "Data not found" });
 });
 
 // UPDATE
-app.patch("/student", (request, response) => {
+app.put("/student", (request, response) => {
   const rollNo = request.query.rollNo;
   const password = request.body.password;
 
@@ -63,11 +74,11 @@ app.patch("/student", (request, response) => {
 
     //Send confirmation message
     response.statusCode = 200;
-    return response.send("Updated user.");
+    return response.json({ message: "Updated user." });
   }
 
   response.statusCode = 403;
-  response.send("Invalid roll number or password.");
+  return response.json({ message: "Invalid roll number or password." });
 });
 
 // DELETE
@@ -82,11 +93,11 @@ app.delete("/student", (request, response) => {
 
     //Send confirmation message
     response.statusCode = 200;
-    return response.send("Deleted user.");
+    return response.json({ message: "Deleted user." });
   }
 
   response.statusCode = 403;
-  response.send("Invalid roll number or password.");
+  response.json({ message: "Invalid roll number or password." });
 });
 
 app.listen(3000, () => {

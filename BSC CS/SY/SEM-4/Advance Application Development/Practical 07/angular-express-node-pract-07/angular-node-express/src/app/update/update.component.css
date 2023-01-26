@@ -42,23 +42,3 @@ form {
     background-color: #45a049;
   }
   
-  table {
-    width: 50%;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-th, td {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-label {
-    font-weight: bold;
-}

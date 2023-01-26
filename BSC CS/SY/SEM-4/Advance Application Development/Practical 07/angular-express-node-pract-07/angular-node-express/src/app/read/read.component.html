@@ -1,1 +1,35 @@
-<p>read works!</p>
+<div class="center">
+  <form (submit)="onSubmit()">
+      <h2>Read Student Record</h2>
+      <label for="rollNo">Roll No:</label>
+      <input [(ngModel)]="student.rollNo" name="rollNo" id="rollNo" placeholder="Roll No">
+      <br>
+      <button type="submit">Search</button>
+    </form>
+    <br>
+
+    <table>
+        
+        <div *ngIf="student.name.length > 2">
+            <tr>
+            <div>
+                <td><label>Roll No:</label></td>
+                <td>{{student.rollNo}}</td>
+              </div>
+            </tr>
+            <tr>
+              <div>
+                <td><label>Name:</label></td>
+                <td>{{student.name}}</td>
+              </div>
+            </tr>
+            <tr>
+              <div>
+                <td><label>Password:</label></td>
+                <td>{{student.password}}</td>
+              </div>
+            </tr>
+          </div>
+          
+      </table>
+</div>

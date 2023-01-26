@@ -1,0 +1,17 @@
+h1 {
+  text-align: center;
+  color: #5e5e5e;
+  margin-top: 50px;
+}
+
+.container {
+  display: flex; 
+  justify-content: center; 
+}
+
+a {
+  padding: 10px 20px; 
+  text-align: center;
+  text-decoration: none;
+  color: blue;
+}
