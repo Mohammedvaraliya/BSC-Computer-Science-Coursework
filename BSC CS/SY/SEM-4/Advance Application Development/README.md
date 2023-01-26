@@ -20,3 +20,12 @@
 ## Practical 5
 
 * Write a program to implement Error Handling in Angular JS
+
+## Practical 6
+
+* Create an application for Customer / Students records using AngularJS
+
+## Practical 7
+
+* Write a program to create a simple web application using Express, Node JS and Angular JS
+
