@@ -1,1 +1,15 @@
 <p>create works!</p>
+
+<form (submit)="onSubmit()">
+    <label for="rollNo">Roll No:</label>
+    <input [(ngModel)]="student.rollNo" name="rollNo" id="rollNo" placeholder="Roll No">
+    <br>
+    <label for="name">Name:</label>
+    <input [(ngModel)]="student.name" name="name" id="name" placeholder="Name">
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" [(ngModel)]="student.password" name="password" id="password" placeholder="Password">
+    <br>
+    <button type="submit">Register</button>
+</form>
+  

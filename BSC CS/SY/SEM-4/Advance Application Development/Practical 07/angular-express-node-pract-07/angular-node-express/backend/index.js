@@ -10,6 +10,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 
+// 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 app.get("/", (request, response) => {
   response.send("Welcome to Student Registration Portal.");
 });
@@ -21,14 +28,14 @@ app.post("/student", (request, response) => {
   // Check if the roll no exists
   if (Object.keys(data).includes(student.rollNo.toString())) {
     response.statusCode = 409;
-    return response.send("Student already exists.");
+    return response.json({ message: "Student already exist" });
   }
 
   // Add record to memory
   data[request.body.rollNo] = request.body;
 
   response.statusCode = 200;
-  response.send("Data added successfully");
+  response.json({ message: "Data added successfully" });
 });
 
 // READ
