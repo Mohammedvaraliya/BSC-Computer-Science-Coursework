@@ -37,8 +37,9 @@
     5. RIP does not support multiple paths on the same route, which may result in
        extra routing loops.
 
+1. `Configuring Router 0 (using the CLI mode)`
+
     ```bash
-    `Configuring Router 0 (using the CLI mode)`
     Router>en
     Router>enable
     Router#
@@ -56,8 +57,9 @@
     Router
     ```
 
+2. `Configuring Router 1 (using the CLI mode)`
+
     ```bash
-    `Configuring Router 1 (using the CLI mode)`
     Router>enable
     Router#configure terminal
     Router(config)#interface gigabitEthernet 0/0
@@ -73,8 +75,9 @@
     Router(config-if)#no shutdown 
     ```
 
+3. `Configuring Router 2 (using the CLI mode)`
+
     ```bash
-    `Configuring Router 2 (using the CLI mode)`
     Router>enable
     Router#configure terminal
     Router(config)#interface gigabitEthernet 0/0
@@ -86,8 +89,9 @@
     Router(config-if)#no shutdown
     ```
 
+4. `Setting the RIPv1 on Router 0`
+
     ```bash
-    `Setting the RIPv1 on Router 0`
     Router>enable
     Router#configure terminal
     Router(config)#router rip
@@ -96,8 +100,9 @@
     Router(config-router)#exit
     ```
 
+5. `Setting the RIPv1 on Router 1`
+
     ```bash
-    `Setting the RIPv1 on Router 1`
     Router>enable
     Router#configure terminal
     Enter configuration commands, one per line. End with CNTL/Z.
@@ -109,9 +114,9 @@
     Router(config)#
     Router#
     ```
+6. `Setting the RIPv1 on Router 2`
 
     ```bash
-    `Setting the RIPv1 on Router 2`
     Router>enable
     Router#configure terminal
     Router(config)#router rip
