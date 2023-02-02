@@ -1,0 +1,3 @@
+Aim : Design a Program for creating machine that accepts the string always ending with 101.
+
+    ...
