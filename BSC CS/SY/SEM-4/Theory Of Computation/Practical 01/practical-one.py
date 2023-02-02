@@ -42,7 +42,7 @@ def check_string(string:str):
 # [1:]
 
 def check_string_recursive(string:str, current_state:str):
-    print(string, current_state)
+    # print(string, current_state)
     if len(string) == 1:
         return True if states[current_state][string[0]] == final_state else False
 
@@ -50,6 +50,10 @@ def check_string_recursive(string:str, current_state:str):
 
 
 
-print("Accepted" if check_string_recursive("101101", initial_state) else "Not accepted")
+if __name__ == "__main__":
 
+    X = check_string("01101")
+    print("Accepted" if X else "Not accepted")
 
+    Y = check_string_recursive("01101", initial_state)
+    print("Accepted" if Y else "Not accepted")

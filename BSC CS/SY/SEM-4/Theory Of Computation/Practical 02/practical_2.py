@@ -33,12 +33,20 @@ def check_string(string: str):
 # [1:]
 
 def check_string_recursive(string: str, current_state: str):
-    print(string, current_state)
+    # print(string, current_state)
     if len(string) == 1:
         return True if states[current_state][string[0]] == final_state else False
 
     return check_string_recursive(string[1:], states[current_state][string[0]])
 
 
-print("Accepted" if check_string_recursive(
-    "101", initial_state) else "Not accepted")
+
+if __name__ == "__main__":
+
+    # 0110 is the binary of decimal 6
+
+    X = check_string("0110")
+    print("Accepted" if X else "Not accepted")
+
+    Y = check_string_recursive("0110", initial_state)
+    print("Accepted" if Y else "Not accepted")
