@@ -1,6 +1,5 @@
 Aim : Design a Program for creating machine that accepts the string always ending with 101.
 
-    ```bash
     Design a Program for creating machine that accepts the string always ending with 101.
     Certainly! This code defines a deterministic finite automaton (DFA) that accepts strings 
     that end with the substring "101". The DFA is modeled using a set of states and state transitions.
@@ -24,4 +23,3 @@ Aim : Design a Program for creating machine that accepts the string always endin
 
     check_string_recursive is a function that takes a string and the current state of the DFA as input, and
     returns a boolean value indicating whether the string is accepted by the DFA. 
-    ```
