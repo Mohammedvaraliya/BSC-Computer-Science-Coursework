@@ -45,8 +45,10 @@ if __name__ == "__main__":
 
     # 0110 is the binary of decimal 6
 
-    X = check_string("0110")
+    user_input = input("Enter the string : ")
+
+    X = check_string(user_input)
     print("Accepted" if X else "Not accepted")
 
-    Y = check_string_recursive("0110", initial_state)
+    Y = check_string_recursive(user_input, initial_state)
     print("Accepted" if Y else "Not accepted")

@@ -52,8 +52,10 @@ def check_string_recursive(string:str, current_state:str):
 
 if __name__ == "__main__":
 
-    X = check_string("01101")
+    user_input = input("Enter the string : ")
+
+    X = check_string(user_input)
     print("Accepted" if X else "Not accepted")
 
-    Y = check_string_recursive("01101", initial_state)
+    Y = check_string_recursive(user_input, initial_state)
     print("Accepted" if Y else "Not accepted")
