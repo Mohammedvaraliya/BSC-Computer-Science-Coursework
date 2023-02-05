@@ -22,9 +22,10 @@ states = {
 initial_state = "A"
 
 
-def check_string(string: str):
+def three_consecutive_one(string: str):
     current_state = initial_state  # By defaul initial state
     count = 0
+    consecutive_one = 0
     print(string)
 
     for s in string:
@@ -32,26 +33,31 @@ def check_string(string: str):
         if (s == "1"):
             current_state = states[current_state][s]
             count += 1
-            print(count)
+            if count == 3:
+                consecutive_one = 3
         else:
             current_state = states[current_state][s]
             count = 0
-            print(count)
 
 
-    return True if count >= 3 else False
+    return True if consecutive_one == 3 else False
 
 
-# If len == 1
+def three_consecutive_one_recursive(string: str, current_state: str, count: int = 0, consecutive_one: int = 0):
 
-# [1:]
+    if len(string) == 0:
+        return True if consecutive_one == 3 else False
+    
+    if string[0] == "1":
+        next_state = states[current_state][string[0]]
+        count += 1
+        if count == 3:
+            consecutive_one = 3 
+    else:
+        next_state = states[current_state][string[0]]
+        count = 0
 
-# def check_string_recursive(string: str, current_state: str):
-#     # print(string, current_state)
-#     if len(string) == 1:
-#         return True if states[current_state][string[0]] == final_state else False
-
-#     return check_string_recursive(string[1:], states[current_state][string[0]])
+    return three_consecutive_one_recursive(string[1:], next_state, count, consecutive_one)
 
 
 
@@ -61,8 +67,8 @@ if __name__ == "__main__":
 
     user_input = input("Enter the string : ")
 
-    X = check_string(user_input)
+    X = three_consecutive_one(user_input)
     print("Accepted" if X else "Not accepted")
 
-    # Y = check_string_recursive(user_input, initial_state)
-    # print("Accepted" if Y else "Not accepted")
+    Y = three_consecutive_one_recursive(user_input, initial_state)
+    print("Accepted" if Y else "Not accepted")
