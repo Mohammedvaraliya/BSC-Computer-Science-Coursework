@@ -14,50 +14,50 @@ states = {
         "1": "D"
     },
     "D": {
-        "0": "D",
+        "0": "F",
+        "1": "E"
+    },
+    "E": {
+        "0": "A",
+        "1": "E"
+    },
+    "F": {
+        "0": "F",
+        "1": "G"
+    },
+    "G": {
+        "0": "F",
+        "1": "H"
+    },
+    "H": {
+        "0": "F",
         "1": "D"
     }
 }
 
 initial_state = "A"
+final_states = ["D", "F", "G", "H"]
 
 
 def three_consecutive_one(string: str):
     current_state = initial_state  # By defaul initial state
-    count = 0
-    consecutive_one = 0
-    print(string)
 
     for s in string:
         # Transition to next state
-        if (s == "1"):
-            current_state = states[current_state][s]
-            count += 1
-            if count == 3:
-                consecutive_one = 3
-        else:
-            current_state = states[current_state][s]
-            count = 0
+        current_state = states[current_state][s]
+
+    if current_state in final_states:
+        return True
+
+    return False
 
 
-    return True if consecutive_one == 3 else False
+def three_consecutive_one_recursive(string:str, current_state:str):
+    # print(string, current_state)
+    if len(string) == 1:
+        return True if states[current_state][string[0]] in final_states else False
 
-
-def three_consecutive_one_recursive(string: str, current_state: str, count: int = 0, consecutive_one: int = 0):
-
-    if len(string) == 0:
-        return True if consecutive_one == 3 else False
-    
-    if string[0] == "1":
-        next_state = states[current_state][string[0]]
-        count += 1
-        if count == 3:
-            consecutive_one = 3 
-    else:
-        next_state = states[current_state][string[0]]
-        count = 0
-
-    return three_consecutive_one_recursive(string[1:], next_state, count, consecutive_one)
+    return three_consecutive_one_recursive(string[1:], states[current_state][string[0]])
 
 
 
