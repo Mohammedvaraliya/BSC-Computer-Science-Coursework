@@ -8,3 +8,11 @@
 ## Practical 2
 
     Design a program for accepting decimal number divisible by 2.
+
+## Practical 3
+
+    Write a program for tokenization of given input.
+
+## Practical 4
+
+    Design a Program for creating machine that accepts three consecutive one.
