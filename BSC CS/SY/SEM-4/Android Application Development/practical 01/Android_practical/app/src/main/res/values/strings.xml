@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Android_Practical_01</string>
+    <string name="enter_username">Enter UserName</string>
+    <string name="enter_password">Enter Password</string>
+</resources>
