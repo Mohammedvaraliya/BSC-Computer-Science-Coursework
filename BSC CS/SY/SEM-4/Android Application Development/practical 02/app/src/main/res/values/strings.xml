@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Android_Practical_02</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+</resources>
