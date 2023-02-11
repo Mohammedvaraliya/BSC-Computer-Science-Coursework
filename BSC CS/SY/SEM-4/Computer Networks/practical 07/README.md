@@ -1,7 +1,7 @@
 #### Aim: 
-    Using Packet Tracer to create a network with three routers with RIPv2 and
-    each router associated network will have minimum three PC and show the
-    connectivity
+    Using Packet Tracer, create a network with three routers with OSPF and
+    each router associated network will have minimum three PC and show
+    Connectivity
 
 #### Theory:
 
