@@ -24,7 +24,7 @@ final_state = "D"
 
 
 def check_string(string:str):
-    current_state = "A" # By defaul initial state
+    current_state = initial_state # By defaul initial state
 
     for s in string:
         # Transition to next state
