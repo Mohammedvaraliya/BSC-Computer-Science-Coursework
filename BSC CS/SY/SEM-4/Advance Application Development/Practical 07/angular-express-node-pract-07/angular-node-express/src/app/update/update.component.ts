@@ -7,12 +7,12 @@ import { ApiservicesService } from '../apiservices.service';
   styleUrls: ['./update.component.css']
 })
 export class UpdateComponent {
-  student = { rollNo: '', name: '', password: '' };
+  student = { rollNo: '', name: '', password: '', newPassword: '' };
 
   constructor(private updateService: ApiservicesService) { }
 
   onSubmit() {
-    this.updateService.updateStudent(this.student.rollNo, this.student.password, this.student)
+    this.updateService.updateStudent(this.student.rollNo, this.student.password, this.student.newPassword, this.student)
       .subscribe(
         (response) => { 
           console.log(response);

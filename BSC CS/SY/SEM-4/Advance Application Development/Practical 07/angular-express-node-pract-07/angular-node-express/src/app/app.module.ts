@@ -27,7 +27,7 @@ import { DeleteComponent } from './delete/delete.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [ApiservicesService],
+  providers: [ApiservicesService], // Include service
   bootstrap: [AppComponent]
 })
 export class AppModule { }

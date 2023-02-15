@@ -66,11 +66,13 @@ app.get("/student", (request, response) => {
 app.put("/student", (request, response) => {
   const rollNo = request.query.rollNo;
   const password = request.body.password;
+  const newPassword = request.body.newPassword;
 
   // If the record exists and the password matches
   if (data[rollNo] && data[rollNo].password === password) {
     //Update data
     data[rollNo] = request.body;
+    data[rollNo].password = newPassword;
 
     //Send confirmation message
     response.statusCode = 200;

@@ -46,10 +46,10 @@ export class ApiservicesService {
   }
 
   // Update student
-  updateStudent(rollNo: any, password: any, userData: any): Observable<any> {
+  updateStudent(rollNo: any, password: any, newPassword: any, userData: any): Observable<any> {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     const url = `${this.apiUrl}/student?rollNo=${rollNo}`;
-    return this.http.put(url, { password, ...userData }, { headers }).pipe(
+    return this.http.put(url, { password, newPassword, ...userData }, { headers }).pipe(
       catchError((err) => {
         if (err instanceof HttpErrorResponse) {
           if (err.status === 409) {
@@ -63,7 +63,7 @@ export class ApiservicesService {
     );
   }
 
-  // Update student
+  // Delete student
   deleteStudent(rollNo: any, password: any): Observable<any> {
     const bodyData = {
       body: { password },
