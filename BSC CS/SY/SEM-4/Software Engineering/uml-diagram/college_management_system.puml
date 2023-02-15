@@ -1,0 +1,50 @@
+@startuml
+
+class DEPARTMENT {
+    +Deptld
+    +DeptName
+    +NoOfcourses
+    +NoofFaculty
+    +addnewDepartment()
+    +updateDepanment()
+}
+
+class COURSES{
+    +Cousesld
+    +CourseNarne
+    +CourseDurajon
+    +CourseFee
+    +Coursecoordnator
+    +addCourse()
+    +updateCourse()
+    +removeCourse()
+}
+
+class FACULTY{
+    +FacultylD
+    +FacultyName
+    +ContactNo
+    +Subject
+    +addFaculty
+    +updateFaculty()
+    +deleteFaculty()
+}
+
+class STUDENT{
+    +Studentld
+    +StudentName
+    +QuaEfication
+    +Contactno
+    +EmailId
+    +Address
+    +VewStudentInfo()
+    +deleteStudentInfo()
+    +updateStudentInfo()
+}
+
+DEPARTMENT "1..*" -- "1..*" COURSES : +offers
+FACULTY "1..*" -- "1..*" DEPARTMENT : +consists of
+FACULTY "1..*" -- "1..*" COURSES : +teaches
+STUDENT "1..*" -- "1..*" COURSES  : +enrolls
+
+@enduml

@@ -1,0 +1,40 @@
+@startuml
+class PROJECTS {
+    +ProjectName    
+    +Budget
+    +NoOfitems
+    +Members
+    +Prjectduedate
+    +ProjectDuration
+    +addProjects()
+    +updateProjects()
+    +deleteProjects()
+}
+
+class CLIENTS{
+    +ClientId
+    +ClientName
+    +Emailid
+    +Address
+    +ContactNo
+    +addClient()
+    +updateClient()
+    +removeClient()
+}
+
+class EMPLOYEE {
+    +Employeeid
+    +EmployeeName
+    +Contactno
+    +Designation
+    +Workingon
+    +addEmployee()
+    +updateEmployee()
+}
+
+PROJECTS "1..*" -- "1..*" EMPLOYEE 
+EMPLOYEE "1..*" -- "1..*" CLIENTS
+PROJECTS "1..*" -- "1..*" CLIENTS 
+
+
+@enduml
