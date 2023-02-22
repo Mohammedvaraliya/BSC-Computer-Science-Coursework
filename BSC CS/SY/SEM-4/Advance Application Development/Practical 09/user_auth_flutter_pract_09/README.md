@@ -30,6 +30,3 @@ This is a simple Flutter application that allows users to authenticate using a u
 
 ![Frame 1](https://user-images.githubusercontent.com/95087498/220708069-b0187150-0065-468c-b4f4-5446b0fc35c7.png)
 
-## Contributing
-
-If you find any issues or bugs, feel free to open an issue or submit a pull request.
