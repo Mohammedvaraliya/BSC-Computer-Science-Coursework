@@ -1,16 +1,35 @@
-# user_auth_flutter_pract_09
+# User Authentication App
 
-A new Flutter project.
+    This is a simple Flutter application that allows users to authenticate using a username and password.
+
+## Features
+
+* Login screen with form validation
+* User authentication using a hardcoded list of usernames and passwords
+* User home screen with username display
+
+## Requirements
+
+* Flutter 2.0 or higher
 
 ## Getting Started
+1. Clone the repository:
 
-This project is a starting point for a Flutter application.
+    git clone https://github.com/your-username/user-auth-flutter.git
 
-A few resources to get you started if this is your first Flutter project:
+2. Install the dependencies:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+    flutter pub get
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+3. Run the app:
+
+    flutter run
+
+## Screenshots
+
+Login Screen
+User Home Screen
+
+## Contributing
+
+If you find any issues or bugs, feel free to open an issue or submit a pull request.
