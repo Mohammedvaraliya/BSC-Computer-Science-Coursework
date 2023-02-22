@@ -13,17 +13,18 @@
 * Flutter 2.0 or higher
 
 ## Getting Started
+
 1. Clone the repository:
 
-    git clone https://github.com/your-username/user-auth-flutter.git
+        git clone https://github.com/Mohammedvaraliya/BSC-CS-Practical-Performed.git
 
 2. Install the dependencies:
 
-    flutter pub get
+        flutter pub get
 
 3. Run the app:
 
-    flutter run
+        flutter run
 
 ## Screenshots
 
