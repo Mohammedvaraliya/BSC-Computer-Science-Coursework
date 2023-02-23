@@ -17,4 +17,12 @@ class UserDb {
   bool userExist(String username) {
     return _users.containsKey(username);
   }
+
+  void addUser(String username, String password) {
+    if (!_users.containsKey(username)) {
+      _users[username] = password;
+    } else {
+      throw Exception('Username already exists!');
+    }
+  }
 }

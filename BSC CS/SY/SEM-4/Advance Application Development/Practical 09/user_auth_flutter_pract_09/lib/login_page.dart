@@ -3,14 +3,19 @@
 import 'package:flutter/material.dart';
 import 'package:user_auth_flutter_pract_09/user_db.dart';
 import 'user_home.dart';
+import 'create_user.dart';
 
 class LoginPage extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
   final username = TextEditingController();
   final password = TextEditingController();
+
+  final UserDb userDb;
+
+  LoginPage({Key? key, required this.userDb}) : super(key: key);
+
   bool authenticate() {
-    UserDb user = UserDb();
-    return user.authenticate(username.text, password.text);
+    return userDb.authenticate(username.text, password.text);
   }
 
   void handleSubmit(BuildContext context) {
@@ -33,7 +38,25 @@ class LoginPage extends StatelessWidget {
     }
   }
 
-  LoginPage({super.key});
+  void handleCreateUser(BuildContext context) async {
+    final result = await Navigator.push(
+      context,
+      MaterialPageRoute(
+          builder: (context) => CreateUser(
+                userDb: UserDb(),
+              )),
+    );
+
+    if (result == true) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text("User created successfully"),
+        ),
+      );
+    }
+  }
+
+  // LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -89,16 +112,34 @@ class LoginPage extends StatelessWidget {
                 height: 40,
               ),
               SizedBox(
-                  width: double.infinity,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(30))),
-                    onPressed: () {
-                      handleSubmit(context);
-                    },
-                    child: Text("LOGIN"),
-                  ))
+                width: double.infinity,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30))),
+                  onPressed: () {
+                    handleSubmit(context);
+                  },
+                  child: Text("LOGIN"),
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              SizedBox(
+                width: double.infinity,
+                child: OutlinedButton(
+                  style: OutlinedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30),
+                    ),
+                  ),
+                  onPressed: () {
+                    handleCreateUser(context);
+                  },
+                  child: Text("CREATE USER"),
+                ),
+              ),
             ],
           ),
         ),
