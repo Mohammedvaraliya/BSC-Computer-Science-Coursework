@@ -29,3 +29,24 @@
 
     Write a program to create a simple web application using Express, Node JS and Angular JS
 
+## Practical 8
+
+    Create a simple HTML “Hello World” Project using AngularJS Framework and apply 
+    ng-controller, ng-model and expressions
+
+## Practical 9
+
+    Create an app using Flutter for User Authentication
+
+## Practical 10
+
+    Create an app using Flutter to implement an Image Gallery
+
+## Practical 11
+
+    Create an app using Flutter to demonstrate the use of different layouts
+
+## Practical 12
+
+    Create an app using Flutter to demonstrate navigation in an App
+
