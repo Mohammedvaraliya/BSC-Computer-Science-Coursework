@@ -1,15 +1,19 @@
-## Login Page
+## User Details Page
 <br>
 
-### Login Page App
+### My Android Application
 
-This is a simple Android application that demonstrates how to create a login page using Android Studio and Kotlin. Users can enter their Username and password to log in to the application.
+This is an Android application that allows users to provide their first name, last name, gender, age, and hobbies. The application was built using Android Studio and programmed in Kotlin.
 
 ### Features
 
-* Login screen with username and password fields
-* Basic input validation to ensure email and password are not empty
-* Navigation to the home screen after successful login
+The application has the following features:
+
+* Input fields for first name and last name
+* Checkbox to confirm if the user is 18 or older
+* Radio buttons to select the user's gender
+* A view group to select one or more hobbies(select one)
+
 
 ### Installation
 
@@ -19,12 +23,17 @@ This is a simple Android application that demonstrates how to create a login pag
 2. Open the project in Android Studio
 3. Build and run the project on an emulator or physical device
 
+
 ### Usage
 
-1. Launch the app
-2. Enter a valid username and password(Enter the same username and password)
-3. Tap the "Login" button
-4. If the username and password are valid, the app will give the success message. Otherwise, an error message will be displayed.
+Once the application is installed on your device, follow these steps to use it:
+
+* Open the application.
+* Enter your first name and last name in the input fields.
+* Check the box if you are 18 or older.
+* Select your gender using the radio buttons.
+* Choose your hobbies using the view group.
+* Click the "Save" button to save your information.
 
 ### Overview
 
