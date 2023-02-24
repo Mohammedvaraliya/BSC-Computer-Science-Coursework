@@ -11,7 +11,6 @@ class MainActivity : AppCompatActivity() {
     lateinit var etPassword:EditText
     lateinit var btnLogin:Button
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -19,14 +18,12 @@ class MainActivity : AppCompatActivity() {
         etPassword = findViewById(R.id.et_password)
         btnLogin = findViewById(R.id.btn_login)
 
-        if(etUserName.text.toString().equals(etPassword.text.toString())){
-            Toast.makeText(this,"successfully login!",Toast.LENGTH_SHORT).show()
+        btnLogin.setOnClickListener {
+            if (etUserName.text.toString() == etPassword.text.toString()) {
+                Toast.makeText(this, "Successfully logged in!", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, "Login unsuccessful! Please try again.", Toast.LENGTH_SHORT).show()
+            }
         }
-        else{
-            Toast.makeText(this,"Login Unsuccessfully!",Toast.LENGTH_SHORT).show()
-        }
-
     }
-
-
 }
