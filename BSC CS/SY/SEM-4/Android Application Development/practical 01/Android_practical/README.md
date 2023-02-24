@@ -13,7 +13,9 @@ This is a simple Android application that demonstrates how to create a login pag
 
 ### Installation
 
-1. Clone this repository: git clone https://github.com/Mohammedvaraliya/BSC-CS-Practical-Performed.git
+1. Clone this repository: 
+    
+        git clone https://github.com/Mohammedvaraliya/BSC-CS-Practical-Performed.git
 2. Open the project in Android Studio
 3. Build and run the project on an emulator or physical device
 
