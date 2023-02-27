@@ -1,27 +1,90 @@
-# AngularPract08
+# Angular, ng-controller, ng-model and expressions
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.0.
+## Initializing a Angular project.
 
-## Development server
+1. Initialize a `angular` project using `ng`.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+   ```bash
+    npm install -g @angular/cli
+   ```
 
-## Code scaffolding
+   ```bash
+    ng new angular-pract-08
+   ```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+   ```bash
+    type y and press ENTER
+   ```
 
-## Build
+   ```bash
+    select css and press ENTER
+   ```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## To apply ng-controller, ng-model and expressions
 
-## Running unit tests
+`AngularJS syntax (ng-controller, ng-model, and expressions) in an Angular application. However, these are not supported in Angular.`
+`In Angular, you should use components instead of controllers, and bindings instead of ng-model`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. In your `app.component.html` file, add the following code:
 
-## Running end-to-end tests
+   ```ts
+    <input type="text" [(ngModel)]="name">
+    <p>Hello, {{ name }}!</p>
+   ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+   ```This code defines an input field with two-way data binding using the [(ngModel)] syntax, which binds the value of the input field to the name property in the component. The expression {{ name }} displays the value of the name property.```
 
-## Further help
+1.  In your `app.component.ts` file, add the following code:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+    ```ts
+    import { Component } from '@angular/core';
+
+    @Component({
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css']
+    })
+    export class AppComponent {
+    title = 'angular-pract-08';
+    name =  "";
+    }
+
+    ```
+
+    ```This code defines a component named AppComponent with a title property and a name property. The name property is of type string.```
+
+1. In your `app.module.ts` file, import the `FormsModule` module and add it to the imports array:
+
+   ```ts
+   import { NgModule } from '@angular/core';
+    import { BrowserModule } from '@angular/platform-browser';
+    import { FormsModule } from '@angular/forms';
+
+    import { AppComponent } from './app.component';
+
+    @NgModule({
+    declarations: [
+        AppComponent
+    ],
+    imports: [
+        BrowserModule,
+        FormsModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
+    })
+    export class AppModule { }
+
+   ```
+
+   ```This code imports the FormsModule module and adds it to the imports array, which is necessary for using data binding in your Angular application.```
+
+    ```With these changes, you should now have a working Angular application that uses data binding. When you type a new value into the input field, the value of the name property will be updated, and the text "Hello, " will be updated to reflect the new value.```
+
+## Run the application
+
+    npm start
+
+
+
+
