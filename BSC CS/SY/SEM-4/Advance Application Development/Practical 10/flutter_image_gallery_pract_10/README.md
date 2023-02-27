@@ -1,16 +1,35 @@
 # flutter_image_gallery_pract_10
 
-A new Flutter project.
+    Aim : Create an app using Flutter to implement an Image Gallery
+
+`This is a Flutter application that displays a list of images stored in a List using the cached_network_image package.`
+
+## Features
+
+This application allows you to:
+
+* View a list of images stored in a `List`
+* Tap on an image to view it in full screen
+
+## Requirements
+
+* Flutter 2.0 or higher
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+1. Clone the repository:
 
-A few resources to get you started if this is your first Flutter project:
+        git clone https://github.com/Mohammedvaraliya/BSC-CS-Practical-Performed.git
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+2. Install the dependencies:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+        flutter pub get
+
+3. Run the app:
+
+        flutter run
+
+## Screenshots
+
+![Frame 1](c:/Users/varal/Downloads/Frame%206.png)
+

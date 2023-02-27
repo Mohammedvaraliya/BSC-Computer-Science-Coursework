@@ -1,6 +1,6 @@
 # User Authentication App
 
-This is a simple Flutter application that allows users to authenticate using a username and password.
+        Aim : This is a simple Flutter application that allows users to authenticate using a username and password.
 
 ## Features
 
