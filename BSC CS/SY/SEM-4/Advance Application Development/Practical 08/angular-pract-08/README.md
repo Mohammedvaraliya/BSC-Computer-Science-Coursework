@@ -27,7 +27,7 @@
 
 1. In your `app.component.html` file, add the following code:
 
-   ```ts
+   ```html
     <input type="text" [(ngModel)]="name">
     <p>Hello, {{ name }}!</p>
    ```
