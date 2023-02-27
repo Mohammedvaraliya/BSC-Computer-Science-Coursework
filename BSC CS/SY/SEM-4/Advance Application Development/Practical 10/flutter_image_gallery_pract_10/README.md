@@ -31,5 +31,6 @@ This application allows you to:
 
 ## Screenshots
 
-![Frame 1](c:/Users/varal/Downloads/Frame%206.png)
+![Frame 6](https://user-images.githubusercontent.com/95087498/221528188-1234006c-75a3-4e7c-94e8-4a6cb01f4f2f.png)
+
 
