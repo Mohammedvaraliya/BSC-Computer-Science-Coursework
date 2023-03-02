@@ -1,28 +1,22 @@
 Aim : Design a program for creating a machine which accepts string having equal no. of 1’s and 0’s.
 
-    This code defines a finite state machine that accepts a string of 0s and 1s as input 
-    and returns Accepted or Not accepted based on whether the string contains three consecutive 1s.
+    states dictionary: This defines the transition function for the DFA. Each state is a key in the dictionary, 
+    and its value is another dictionary that maps input symbols to the next state. 
+    For example, if the current state is "A" and the input symbol is "0", the next state would be "B".
 
-    The state machine is defined by the states dictionary. 
-    It maps a current state to a dictionary that maps the next input (0 or 1) to the next state. 
-    For example, if the current state is "A" and the next input is 1, the next state will be "B".
+    initial_state variable: This is the initial state of the DFA. In this case, it is set to "A".
 
-    The initial state is "A" and the final states are ["D", "F", "G", "H"]. 
-    The machine will accept a string if it reaches any of the final states.
+    final_state set: This is a set of all final states of the DFA. In this case, it contains the states "A" and "B".
 
-    The three_consecutive_one function takes a string as input and returns True or False 
-    based on whether the string is accepted by the state machine. 
+    check_string function: This function takes a string as input and returns a boolean indicating whether the input 
+    string is accepted by the DFA. The function uses the transition function defined in the states dictionary to 
+    transition between states for each input symbol in the string. 
     
-    It starts from the initial state and uses the states dictionary to transition from one state to the next based on the next input.
-    If the current state after processing the whole string is in the final states, the function returns True. 
-    Otherwise, it returns False.
+    It also keeps track of the count of 0's and 1's in the string, and checks whether the final state is in 
+    the set of final states and the counts are equal.
 
-    The three_consecutive_one_recursive function is a recursive implementation of the same machine. 
-    It takes a string and a current state as inputs and returns True or False based on whether the 
-    string is accepted by the machine starting from the current state. 
-    
-    If the length of the string is 1, it returns True if the next state after processing the input is in the final states. 
-    Otherwise, it returns False. 
-    
-    If the length of the string is more than 1, it processes the first input, updates the current state, 
-    and calls itself with the rest of the string and the updated current state.
+    user_input variable: This takes user input to get the string to be checked.
+
+    X variable: This is assigned the return value of the check_string function.
+
+    The program then prints "Accepted" if the value of X is True, and "Not accepted" otherwise.
