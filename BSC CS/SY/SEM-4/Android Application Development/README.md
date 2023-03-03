@@ -15,7 +15,7 @@
             * Button
             * Spinner
 
-## Practical 3
+## Extra Practical
 
     Implement an Android application that overrides all of the activity lifecycle methods, including onCreate(), 
     onStart(), onResume(), onPause(), onStop(), onDestroy(), and onRestart().
