@@ -6,7 +6,7 @@ Aim : Design a program for creating a machine which accepts string having equal 
 
     initial_state variable: This is the initial state of the DFA. In this case, it is set to "A".
 
-    final_state set: This is a set of all final states of the DFA. In this case, it contains the states "A" and "B".
+    final_state set: This is a set of all final states of the DFA. In this case, it contains the states "A".
 
     check_string function: This function takes a string as input and returns a boolean indicating whether the input 
     string is accepted by the DFA. The function uses the transition function defined in the states dictionary to 

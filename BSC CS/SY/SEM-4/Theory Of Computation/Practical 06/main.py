@@ -12,7 +12,7 @@ states = {
 }
 
 initial_state = "A"
-final_state = {"A", "B"}
+final_state = {"A"}
 
 
 def check_string(string:str):
