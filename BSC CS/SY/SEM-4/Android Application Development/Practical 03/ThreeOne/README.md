@@ -130,3 +130,5 @@ Aim: ```Create an application to create Image Flipper and Image Gallery. On clic
 
 ## Output
 
+![Frame 7](https://user-images.githubusercontent.com/95087498/223482594-fdfb1b23-7bb3-4f70-ade1-38fae4985bae.png)
+
