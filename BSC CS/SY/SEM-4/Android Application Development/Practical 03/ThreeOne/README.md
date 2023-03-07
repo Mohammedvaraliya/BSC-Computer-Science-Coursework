@@ -1,4 +1,4 @@
-Aim: Create an application to create Image Flipper and Image Gallery. On click on the image display the information about the image.
+Aim: ```Create an application to create Image Flipper and Image Gallery. On click on the image display the information about the image.```
 
 1. Layout file - `practical_three.xml`
     
