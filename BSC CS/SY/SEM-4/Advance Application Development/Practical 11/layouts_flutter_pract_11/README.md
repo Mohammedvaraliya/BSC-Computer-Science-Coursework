@@ -1,13 +1,13 @@
 # layouts_flutter_pract_11
 
-**Aim : Create an app using Flutter to demonstrate navigation in an App**
+**Aim : Create an app using Flutter to demonstrate the use of different layouts**
 
 ## Initializing a Flutter project.
 
 1. Initialize a `Flutter` project using `flutter`.
     
     ```bash
-    flutter create navigation_flutter_pract_12
+    flutter create layouts_flutter_pract_11
     ```
     
 2. Add Following Code in `main.dart` file
