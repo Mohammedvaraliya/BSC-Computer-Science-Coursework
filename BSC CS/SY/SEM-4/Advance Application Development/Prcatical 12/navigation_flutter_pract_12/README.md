@@ -1,16 +1,110 @@
 # navigation_flutter_pract_12
 
-A new Flutter project.
+**Aim : Create an app using Flutter to demonstrate navigation in an App**
 
-## Getting Started
+## Initializing a Flutter project.
 
-This project is a starting point for a Flutter application.
+1. Initialize a `Flutter` project using `flutter`.
+    
+    ```bash
+    flutter create navigation_flutter_pract_12
+    ```
+    
+2. Add Following Code in `main.dart` file
+    
+    ```dart
+    import 'package:flutter/material.dart';
+    import 'package:navigation_flutter_pract_12/home_screen.dart';
+    import 'package:navigation_flutter_pract_12/detail_screen.dart';
+    
+    void main() {
+      runApp(const MyApp());
+    }
+    
+    class MyApp extends StatelessWidget {
+      const MyApp({super.key});
+    
+      @override
+      Widget build(BuildContext context) {
+        return MaterialApp(
+          title: 'Navigation Demo',
+          initialRoute: '/',
+          routes: {
+            '/': (context) => HomeScreen(),
+            '/detail': (context) => DetailScreen(),
+          },
+        );
+      }
+    }
+    ```
+    
+3. Create new dart file in `lib` directory named `home_screen.dart`.
+    
+    And add the following code in that file.
+    
+    ```dart
+    import 'package:flutter/material.dart';
+    
+    class HomeScreen extends StatelessWidget {
+      @override
+      Widget build(BuildContext context) {
+        return Scaffold(
+          appBar: AppBar(
+            title: Text('Home Screen'),
+          ),
+          body: Center(
+            child: ElevatedButton(
+              child: Text('Go to Detail Screen'),
+              onPressed: () {
+                Navigator.pushNamed(context, '/detail');
+              },
+            ),
+          ),
+        );
+      }
+    }
+    ```
+    
+4. Create new dart file in `lib` directory named `detail_screen.dart`.
+    
+    And add the following code in that file.
+    
+    ```dart
+    import 'package:flutter/material.dart';
+    
+    class DetailScreen extends StatelessWidget {
+      @override
+      Widget build(BuildContext context) {
+        return Scaffold(
+          appBar: AppBar(
+            title: Text('Detail Screen'),
+          ),
+          body: Center(
+            child: ElevatedButton(
+              child: Text('Go back to Home Screen'),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            ),
+          ),
+        );
+      }
+    }
+    ```
+    
 
-A few resources to get you started if this is your first Flutter project:
+**Running a project**
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+**Connect Phone**
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+make sure USB debugging is enabled in Developer option
+
+**Run The app**
+
+```bash
+flutter run main.dart
+```
+
+**Output:**
+
+![Frame 12.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a115fe1e-b8ff-430f-aeee-6d6ff9e96555/Frame_12.png)
