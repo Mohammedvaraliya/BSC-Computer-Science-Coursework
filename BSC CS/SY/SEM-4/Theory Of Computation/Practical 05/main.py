@@ -33,3 +33,39 @@ states = {
     }
 }
 
+
+def turing_machine(input_str):
+    current_state = 'A'
+    tape = list(input_str)
+    i_head = 0
+
+    while True:
+        if tape[i_head] not in states[current_state]:
+            return False
+
+        new_state, write_value, move_dir = states[current_state][tape[i_head]]
+        tape[i_head] = write_value
+
+        if move_dir == 'R':
+            i_head += 1
+        elif move_dir == 'L':
+            i_head -= 1
+
+        current_state = new_state
+
+        if current_state == 'A' and i_head >= len(tape):
+            return True
+        elif current_state == 'D' and i_head < 0:
+            return True
+        elif current_state not in states or i_head >= len(tape) or i_head < 0:
+            return False
+
+
+
+print(turing_machine('011'))  # True
+print(turing_machine('01111'))  # True
+print(turing_machine('010101111'))  # True
+print(turing_machine('01'))  # False
+print(turing_machine('1101'))  # False
+print(turing_machine('1101101'))  # False
+print(turing_machine('110110111'))  # False
