@@ -1,3 +1,3 @@
-Aim : Write a program for generating regular expressions for regular grammar.
+Aim : Design a Turing machine that’s accepts the even number of 1's.
 
 
