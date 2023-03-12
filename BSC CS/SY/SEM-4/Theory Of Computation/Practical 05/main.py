@@ -33,9 +33,11 @@ states = {
     }
 }
 
+initial_state = "A"
+final_state = {"A"}
 
 def turing_machine(input_str):
-    current_state = 'A'
+    current_state = initial_state
     tape = list(input_str)
     i_head = 0
 
@@ -53,9 +55,7 @@ def turing_machine(input_str):
 
         current_state = new_state
 
-        if current_state == 'A' and i_head >= len(tape):
-            return True
-        elif current_state == 'D' and i_head < 0:
+        if current_state in final_state and i_head >= len(tape):
             return True
         elif current_state not in states or i_head >= len(tape) or i_head < 0:
             return False
