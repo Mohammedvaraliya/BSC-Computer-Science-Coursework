@@ -1,13 +1,10 @@
-Aim: 
-        ```
-        i. Create an Android application to design screens using different layouts and UI 
-        including Button, Edittext, Textview, Radio Button etc.
+#### Aim: 
+        i. Create an Android application to design screens using different layouts and UI including Button, Edittext, Textview, Radio Button etc.
         ii. Write an android application demonstrating response to event/user interaction for
-        a. Checkbox
-        b. Radio button
-        c. Button
-        d. Spinner
-        ```
+            a. Checkbox
+            b. Radio button
+            c. Button
+            d. Spinner
 
 1. Layout file - `practical_two.xml`
     
