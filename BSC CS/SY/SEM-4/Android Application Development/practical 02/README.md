@@ -108,6 +108,27 @@
     
     </androidx.constraintlayout.widget.ConstraintLayout>
     ```
+
+1. Add the following code in `strings.xml` in the values directory of res folder.
+
+    ```xml
+    <resources>
+        <string name="app_name">MVLUCollege</string>
+        <string name="first_name">First Name</string>
+        <string name="last_name">Last Name</string>
+        <string name="male">Male</string>
+        <string name="female">Female</string>
+        <string name="are_you_18">Are you 18+ ?</string>
+        <string name="save">Save</string>
+
+        <string-array name="hobbies">
+            <item>Cricket</item>
+            <item>Football</item>
+            <item>Swimming</item>
+            <item>Badminton</item>
+        </string-array>
+    </resources>
+    ```
     
 
 1. Activity File - `PracticialTwo.kt`
