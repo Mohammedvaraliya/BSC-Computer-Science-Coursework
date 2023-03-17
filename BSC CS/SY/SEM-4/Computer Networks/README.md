@@ -38,3 +38,20 @@
     Using Packet Tracer, create a network with three routers with OSPF and
     each router associated network will have minimum three PC and show
     Connectivity
+
+## Practical 8
+
+    Using Packet Tracer, create a network with three routers with BGP and each router 
+    associated network will have minimum three PC. Show Connectivity
+
+## Practical 9
+
+    Using Packet Tracer, create a wireless network of multiple PCs using appropriate 
+    access point.
+
+## Practical 10
+
+    Using Wireshark, network analyzer, set the filter for ICMP, TCP, HTTP, UDP, FTP 
+    and perform respective protocol transactions to show/prove that the network analyzer is 
+    working
+
