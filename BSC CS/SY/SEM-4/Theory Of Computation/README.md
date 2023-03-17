@@ -16,3 +16,15 @@
 ## Practical 4
 
     Design a Program for creating machine that accepts three consecutive one.
+
+## Practical 5
+
+    Design a Turing machine that’s accepts the even number of 1's.
+
+## Practical 6
+
+    Design a program for creating a machine which accepts string having equal no. of 1’s and 0’s.
+
+## Practical 7
+
+    Design a program for creating a machine which count number of 1’s and 0’s in a given string.
