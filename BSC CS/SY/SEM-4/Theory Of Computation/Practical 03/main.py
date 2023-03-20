@@ -13,6 +13,9 @@ def tokenize(input_str):
             if word:
                 tokens.append(word)
                 word = ""
+    if word:
+        tokens.append(word)
+        word = ""
     
     return tokens
 
@@ -20,5 +23,5 @@ def tokenize(input_str):
 
 if __name__ == "__main__":
 
-    string = "This is an example of tokenization."
+    string = "This is an example of tokenization"
     print(tokenize(string))
