@@ -89,4 +89,4 @@ if __name__ == "__main__":
     start = "versova"
     destination = "juhu circle"
 
-    bestfirstsearch_traverse(Graph, heuristic_graph, start, destination, type="iterative")
+    bestfirstsearch_traverse(Graph, heuristic_graph, start, destination, type="recursive")
