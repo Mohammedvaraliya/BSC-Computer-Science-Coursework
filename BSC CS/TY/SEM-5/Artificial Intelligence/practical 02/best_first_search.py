@@ -40,14 +40,14 @@ def bestfirstsearch_recursive(graph, heuristic_graph, visited, priority_queue, d
 
     return bestfirstsearch_recursive(graph, heuristic_graph, visited, priority_queue, destination, total_distance)
 
-def bestfirstsearch_traverse(graph, heuristic_graph, start, destination, type):
+def bestfirstsearch_traverse(graph, heuristic_graph, start, destination, traverse):
     visited = set()
     priority_queue = [(heuristic_graph[start], start, 0)]
     total_distance = 0
 
-    if type == "iterative":
+    if traverse == "iterative":
         total_distance = bestfirstsearch_iterative(graph, heuristic_graph, start, destination)
-    elif type == "recursive":
+    elif traverse == "recursive":
         total_distance = bestfirstsearch_recursive(graph, heuristic_graph, visited, priority_queue, destination, total_distance)
 
     print(f"The final distance from '{start}' to '{destination}' is: {total_distance}")
@@ -89,4 +89,4 @@ if __name__ == "__main__":
     start = "versova"
     destination = "juhu circle"
 
-    bestfirstsearch_traverse(Graph, heuristic_graph, start, destination, type="recursive")
+    bestfirstsearch_traverse(Graph, heuristic_graph, start, destination, traverse="recursive")
