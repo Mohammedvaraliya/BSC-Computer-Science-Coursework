@@ -1,4 +1,4 @@
-## Practical 01
+## Practical 02
 
 ## Problem Statement
 
