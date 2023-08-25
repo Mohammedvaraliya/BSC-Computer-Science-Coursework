@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.DirectX;
 using Microsoft.DirectX.Direct3D;
@@ -30,17 +28,14 @@ namespace Practical_01
         }
         private void Render()
         {
-            device.Clear(ClearFlags.Target, Color.Blue, 0, 1);
+            device.Clear(ClearFlags.Target, Color.BlueViolet, 0, 1);
             device.Present();
-        }
-        private void Form1_Paint_1(object sender, PaintEventArgs e)
-        {
-            Render();
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-
+            Render();
         }
     }
 }
+
