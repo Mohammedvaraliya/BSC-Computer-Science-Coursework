@@ -1,6 +1,6 @@
 from collections import deque
 
-def iterativeDFS(graph, start):
+def iterativeDFS(graph, start, destination):
     stack = deque()
     visited = []
     stack.append(start)
@@ -14,9 +14,12 @@ def iterativeDFS(graph, start):
         visited.append(node)
         print(node)
 
+        if node == destination:
+            return
+
         for neighbor in graph[node]:
             if neighbor not in visited:
-                stack.append(neighbor)
+                stack.appendleft(neighbor)
 
 
 
@@ -40,5 +43,6 @@ if __name__ == "__main__":
     }
 
     start = "versova"
+    destination = "juhu circle"
 
-    iterativeDFS(Graph, start)
+    iterativeDFS(Graph, start, destination)

@@ -1,13 +1,10 @@
-def bfs_traverse(visited, graph, start, destination):
+def bfs_traverse(visited, graph, start):
     visited.append(start)
     queue.append(start)
 
     while queue:
         m = queue.pop(0)
         print(m)
-
-        if m == destination:
-          break
 
         for neighbour in graph[m]:
             if neighbour not in visited:
@@ -38,6 +35,5 @@ if __name__ == "__main__":
     visited = []
     queue = []
     start = "versova"
-    destination = "juhu circle"
 
-    bfs_traverse(visited, Graph, start, destination)
+    bfs_traverse(visited, Graph, start)
