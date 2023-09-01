@@ -3,7 +3,7 @@ from collections import deque
 def iterativeDFS(graph, start, destination):
     stack = deque()
     visited = []
-    stack.append(start)
+    stack.appendleft(start)
 
     while stack:
         node = stack.popleft()
