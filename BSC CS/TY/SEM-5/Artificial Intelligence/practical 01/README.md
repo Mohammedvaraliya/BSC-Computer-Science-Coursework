@@ -16,8 +16,9 @@
 1. Initialize an empty `visited` list to keep track of visited nodes.
 2. Initialize an empty `queue` to store nodes that need to be explored.
 3. Enqueue the `start` node into the `queue`.
+1. Initialize a `m` variable.
 4. While the `queue` is not empty:
-   - Dequeue a node `m` from the front of the `queue`.
+   - Deque a node from the left of the `queue` and assign it to `m`.
    - Print node `m`.
    - If node `m` is equal to the `destination`, stop the traversal.
    - For each neighbor `neighbour` of node `m`:
