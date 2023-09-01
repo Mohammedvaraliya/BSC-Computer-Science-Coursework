@@ -54,3 +54,10 @@
 
 1. Time complexity - $O(|V| + |E|)$ where $|V|$ is the number of vertices in the graph and $|E|$ is the number of edges in the graph.
 2.  Space complexity - $O(|V|)$ where $|V|$ is the number of nodes in the graph.
+
+
+## Comparison of the algorithms
+
+1. While Breadth First Search and Iterative Depth First Search have similar time and space complexity, however the differences lies in completeness.
+2. Completeness is guarantee that a given algorithm will eventually reach goal state.
+3. Breadth First Search algorithm is complete, depth first search on the other hand is not complete i.e there is a possibility that the algorithm would not end up in a goal state eventually running an infinite loop.
