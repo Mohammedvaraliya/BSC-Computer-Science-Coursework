@@ -63,7 +63,6 @@
 
 **A * Search algorithm**
 
-
 1. Start
 2. Initialize an `open_list` as a priority queue (min-heap) with the starting node and a cost of 0.
 3. Initialize a `closed_list` as an empty set to track visited nodes.
@@ -84,3 +83,7 @@
       - Add `neighbor` to the `open_list` with its updated `f_score` and update `parents[neighbor]` to `current_node`.
 8. If the `open_list` becomes empty and the destination is not reached, return "No path found."
 9. End
+
+**Best First Search algorithm**
+
+1. start
