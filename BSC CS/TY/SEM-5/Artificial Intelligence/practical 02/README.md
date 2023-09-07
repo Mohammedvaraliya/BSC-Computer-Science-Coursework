@@ -8,6 +8,7 @@
 2. Implement the Recursive Best-First Search algorithm for the same problem.
 3. Compare the performance and effectiveness of both algorithms.
 
+---
 
 ### A * Search
 
@@ -35,29 +36,31 @@
 
 12. In this case, A* found the path with the least overall cost from "versova" to "juhu circle", even though it's not the path with the least heuristic cost at every step. The balance between the actual cost `g(n)` and heuristic cost `h(n)` helps A* to effectively find the shortest path to the goal.
 
+---
 
 ### Best First Search
 
-1. Best-First Search algorithm uses an evaluation function f(n) for each node and the evaluation function is construed as a cost estimate. So the node with the smallest evaluation is chosen. The evaluation function f(n) is typically a heuristic function h(n) that estimates the cost to reach the goal from the node n.
+1. Best-First Search algorithm uses an evaluation function `f(n)` for each node and the evaluation function is construed as a cost estimate. So the node with the smallest evaluation is chosen. The evaluation function `f(n)` is typically a heuristic function `h(n)` that estimates the cost to reach the goal from the node n.
 
-2. Given the problem you've provided, we are going to apply the Greedy Best-First Search algorithm which is a version of best-first search that uses only the heuristic function to decide which path to follow. The algorithm does not take into account the cost of reaching the current node when deciding on the path, it uses only the estimated cost to reach the goal from the current node.
+2. We are going to apply the Greedy Best-First Search algorithm which is a version of best-first search that uses only the heuristic function to decide which path to follow. The algorithm does not take into account the cost of reaching the current node when deciding on the path, it uses only the estimated cost to reach the goal from the current node.
 
-3. To illustrate, the algorithm starts from "versova" and aims to reach "juhu circle". It will expand the node with the smallest heuristic value at each step. If multiple nodes have the same smallest heuristic value, it will choose one arbitrarily.
+3. To illustrate, the algorithm starts from `"versova"` and aims to reach `"juhu circle"`. It will expand the node with the smallest heuristic value at each step. If multiple nodes have the same smallest heuristic value, it will choose one arbitrarily.
 
 4. Here is the step-by-step illustration of the algorithm:
 
-5. Start at "versova". The neighbours are "kamdhenu signal" (heuristic: 1560), "juhu link rd (1)" (heuristic: 1760), "dn nagar" (heuristic: 1390). Choose "dn nagar" as it has the smallest heuristic value.
+5. Start at `"versova"`. The neighbours are `"kamdhenu signal" (heuristic: 1560)`, `"juhu link rd (1)" (heuristic: 1760)`, `"dn nagar" (heuristic: 1390)`. Choose `"dn nagar"` as it has the smallest heuristic value.
 
-6. From "dn nagar", the neighbours are "rossoneri pizza" (heuristic: 1220), "ajay stationary" (heuristic: 708). Choose "ajay stationary".
+6. From `"dn nagar"`, the neighbours are `"rossoneri pizza" (heuristic: 1220)`, `"ajay stationary" (heuristic: 708)`. Choose `"ajay stationary"`.
 
-7. From "ajay stationary", the neighbour is "wonder kitchen corner" (heuristic: 622). Choose "wonder kitchen corner".
+7. From `"ajay stationary"`, the neighbour is `"wonder kitchen corner" (heuristic: 622)`. Choose `"wonder kitchen corner"`.
 
-8. From "wonder kitchen corner", the neighbour is "juhu circle" (heuristic: 0). Choose "juhu circle".
+8. From `"wonder kitchen corner"`, the neighbour is `"juhu circle" (heuristic: 0)`. Choose `"juhu circle"`.
 
-9. So, the path found by the algorithm is "versova" -> "dn nagar" -> "ajay stationary" -> "wonder kitchen corner" -> "juhu circle".
+9. So, the path found by the algorithm is `"versova" -> "dn nagar" -> "ajay stationary" -> "wonder kitchen corner" -> "juhu circle"`.
 
 10. Please note that this path is not necessarily the optimal path. The Greedy Best-First Search algorithm does not guarantee finding the shortest path. It aims to find a path as quickly as possible by always choosing the path that appears to be the best at each step, but this path may not be the shortest overall. In other words, it prioritizes speed over accuracy.
 
+---
 
 ## Algorithms
 
@@ -84,6 +87,45 @@
 8. If the `open_list` becomes empty and the destination is not reached, return "No path found."
 9. End
 
+---
+
+**Time and Space Complexity**
+
+1. **Time Complexity:** `O(|V| + |E|)`, where `|V|` is the number of vertices (nodes) and `|E|` is the number of edges in the graph. It explores each node and edge at most once.
+2. **Space Complexity:** `O(|V|)`, as it stores information about each node in the open and closed lists.
+
+---
+
 **Best First Search algorithm**
 
-1. start
+1. Start
+2. Initialize an empty `visited` set to keep track of visited nodes.
+3. Initialize a `priority_queue` as a min-heap with the starting node, its heuristic value, and a distance of 0.
+4. Initialize `total_distance` to 0.
+5. While `priority_queue` is not empty:
+   - Pop the node with the lowest heuristic value from the `priority_queue`. Set `current_node`, `heuristic_value`, and `dist` accordingly.
+   - Add `current_node` to the `visited` set and print it.
+   - Add `dist` to `total_distance`.
+   - If `current_node` is equal to the destination node:
+     - Return `total_distance`.
+   - For each neighbor (`neighbor`) of `current_node`:
+     - If `neighbor` is not in `visited`:
+       - Add `neighbor` to `visited`.
+       - Push `neighbor` into the `priority_queue` with its heuristic value and distance.
+6. Return `total_distance` as the final distance.
+7. End
+
+---
+
+**Time and Space Complexity**
+
+1. **Time Complexity:** `O(|V| + |E|)`, where `|V|` is the number of vertices (nodes) and `|E|` is the number of edges in the graph. It explores each node and edge at most once.
+2. **Space Complexity:** `O(|V|)`, as it stores information about each node in the open and closed lists.
+
+---
+
+## Comparison of the algorithms
+
+1. **Effectiveness:** A* Search guarantees the shortest path with a reliable heuristic, while Best-First Search prioritizes speed over optimality.
+2. **Speed:** Best-First Search can be faster with a good heuristic estimate, while A* Search is more computationally intensive but guarantees optimality.
+3. **Optimality and Memory:** A* Search ensures optimality but may require more memory due to additional information storage. Both algorithms have similar space complexity.
