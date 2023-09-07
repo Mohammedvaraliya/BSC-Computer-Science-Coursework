@@ -63,5 +63,24 @@
 
 **A * Search algorithm**
 
-1. start
-2. 
+
+1. Start
+2. Initialize an `open_list` as a priority queue (min-heap) with the starting node and a cost of 0.
+3. Initialize a `closed_list` as an empty set to track visited nodes.
+4. Create a dictionary `g_scores` to store the cost from the start node to each node, initialized with infinity for all nodes except the start node (set `g_scores[start] = 0`).
+5. Create an empty `parents` dictionary to track the parent node for each visited node.
+6. Initialize `total_distance` to 0.
+7. While the `open_list` is not empty:
+   1. Pop the node with the lowest `f_score` from the `open_list`. Update `current_node` to this node.
+   2. Add `current_node` to the `closed_list`.
+   3. If `current_node` is equal to the destination node:
+      - Construct the path by tracing back from `destination` to `start` using the `parents` dictionary and calculate `total_distance`.
+      - Reverse the path to get the correct order.
+      - Return the path and `total_distance`.
+   4. For each neighbor (`neighbor`) of `current_node`:
+      - If `neighbor` is in the `closed_list`, skip to the next neighbor.
+      - Calculate the tentative `g_score` from the start to `neighbor` through `current_node`.
+      - If the `g_score` is less than the previously recorded `g_score` for `neighbor`, update `g_scores` and `f_score`.
+      - Add `neighbor` to the `open_list` with its updated `f_score` and update `parents[neighbor]` to `current_node`.
+8. If the `open_list` becomes empty and the destination is not reached, return "No path found."
+9. End
