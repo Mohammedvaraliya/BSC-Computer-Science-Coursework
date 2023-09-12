@@ -48,7 +48,7 @@ Steps in ID3 algorithm.
 4. The set S is then split by the selected attribute to produce a subset of the data.
 5. The algorithm continues to recur on each subset, considering only attributes never selected before.
 
-    ![Image](image.png)
+    ![Image](assets/image.png)
 
 ## Time and Space Complexity
 
