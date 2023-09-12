@@ -31,6 +31,7 @@ Types of decision trees are based on the type of target variable we have. It can
 6. **Branch / Sub-Tree:** A subsection of the entire tree is called branch or sub-tree.
 7. **Parent and Child Node:** A node, which is divided into sub-nodes is called a parent node of sub-nodes whereas sub-nodes are the child of a parent node.
     
+    ![Alt text](assets/image.png)
 
     
 
@@ -48,7 +49,6 @@ Steps in ID3 algorithm.
 4. The set S is then split by the selected attribute to produce a subset of the data.
 5. The algorithm continues to recur on each subset, considering only attributes never selected before.
 
-    ![Alt text](assets/image.png)
 
 ## Time and Space Complexity
 
