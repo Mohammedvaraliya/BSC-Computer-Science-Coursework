@@ -54,13 +54,13 @@ Steps in ID3 algorithm.
 
 1. The train time complexity for the ID3 algorithms would be 
     
-    $$
+    ```
     O (n * logn * d)
-    $$
+    ```
     
     where,
     
-     $n$ is the number of data points
+    $n$ is the number of data points
     
     $d$ is the number of dimensions
     
