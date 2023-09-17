@@ -12,9 +12,18 @@ print(pubKeyPEM.decode('ascii'))
 print(f"Private key: (n={hex(pubKey.n)}, d={hex(keyPair.d)})")
 privKeyPEM = keyPair.exportKey()
 print(privKeyPEM.decode('ascii'))
+print("\n")
 
 # Encryption
 msg = b'MVLU College'  # Convert the message to bytes
 encryptor = PKCS1_OAEP.new(pubKey)
 encrypted = encryptor.encrypt(msg)
 print("Encrypted:", binascii.hexlify(encrypted).decode('ascii'))
+print("\n")
+
+# Decryption
+decryptor = PKCS1_OAEP.new(keyPair)
+decrypted = decryptor.decrypt(encrypted)
+# Convert the decrypted bytes back to the original message
+decrypted_message = decrypted.decode('utf-8')
+print("Decrypted message:", decrypted_message)
