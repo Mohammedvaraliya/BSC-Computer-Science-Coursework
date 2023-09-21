@@ -8,9 +8,7 @@
 2. Use a given dataset to train the neural network for a specific task.
 3. Evaluate the performance of the trained network on test data
 
-
-
-
+---
 
 The backpropagation algorithm is a type of supervised learning algorithm for artificial neural networks where we fine-tune the weight functions and improve the accuracy of the model. It employs the gradient descent method to reduce the cost function. It reduces the mean-squared distance between the predicted and the actual data. This type of algorithm is generally used for training feed-forward neural networks for a given data whose classifications are known to us.
 
@@ -35,3 +33,5 @@ The algorithm is advantageous for noisy and irregular data. However, the perform
 **Step 5**:In this step, the algorithm moves back to the hidden layers again to optimize the weights and reduce the error.
 
 **Step 6:** End
+
+---

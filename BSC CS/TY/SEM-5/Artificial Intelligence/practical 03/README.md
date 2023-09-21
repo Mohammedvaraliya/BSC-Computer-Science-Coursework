@@ -8,7 +8,7 @@
 2. Evaluate the accuracy and effectiveness of the decision tree on test data.
 3. Visualize and interpret the generated decision tree.
 
-
+---
 
 Decision Tree algorithm belongs to the family of supervised learning algorithms. Unlike other supervised learning algorithms, the decision tree algorithm can be used for solving **regression and classification problems** too.
 
@@ -67,3 +67,5 @@ Steps in ID3 algorithm.
 2. The train space time complexity would be $O(nodes)$.
 3. The test time complexity would be $O(depth)$.
 4. The test space complexity would be $O(nodes)$.
+
+---
