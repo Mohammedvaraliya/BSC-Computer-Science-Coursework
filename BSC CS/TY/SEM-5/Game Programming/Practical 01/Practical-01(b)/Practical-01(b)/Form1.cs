@@ -1,14 +1,8 @@
 ﻿using Microsoft.DirectX.Direct3D;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 
 using System.Windows.Forms;
-using Microsoft.DirectX;
 
 namespace Practical_01_b_
 {
@@ -31,7 +25,7 @@ namespace Practical_01_b_
         }
         private void LoadTexture()
         {
-            texture = TextureLoader.FromFile(device, "C:/Users/varal/Downloads/game.png", 600,
+            texture = TextureLoader.FromFile(device, "D:/BSC-CS-Practical-Performed/BSC CS/TY/SEM-5/Game Programming/Practical 01/Practical-01(b)/game.jpg", 600,
            900, 1, 0, Format.A8B8G8R8, Pool.Managed, Filter.Point, Filter.Point, Color.Transparent.ToArgb());
         }
         private void InitDevice()
