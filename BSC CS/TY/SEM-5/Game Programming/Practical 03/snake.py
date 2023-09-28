@@ -22,26 +22,21 @@ snake_speed = 15
 msg_font = pygame.font.SysFont("Courier", 20)
 score_font = pygame.font.SysFont("Times New Roman", 30)
  
-# Draw Snake 
 def snake(snake_block, snake_list):
     for x in snake_list:
         pygame.draw.rect(screen, snake_color, [x[0], x[1], snake_block, snake_block])
 
-# Get Total Score
 def total_score(score):
     value = score_font.render("Total Score: " + str(score), True, score_color)
     screen.blit(value, [0, 0])        
 
-# Display message when Game Over 
 def message(msg, color):
     mesg = msg_font.render(msg, True, color)
     screen.blit(mesg, [width / 10, height / 3])
 
-# Draw Food
 def draw_food(x, y, radius):
     pygame.draw.circle(screen, food_color, [int(x), int(y)], radius)
- 
-# Main Game Loop 
+
 def main():
     game_over = False
     game_close = False
@@ -126,6 +121,5 @@ def main():
     pygame.quit()
     quit()
  
-# Call Main Game Loop 
 if __name__ == "__main__":
     main()
