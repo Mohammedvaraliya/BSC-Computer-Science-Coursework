@@ -26,3 +26,4 @@ while True:
             quit()  
         # Draws the surface object to the screen.   
         pygame.display.update()
+        
