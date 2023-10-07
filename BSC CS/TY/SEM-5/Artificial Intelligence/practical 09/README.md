@@ -28,6 +28,10 @@ Association rule mining is a technique to identify underlying relations between 
 
 1. *Measures how often items in Y appear in transactions that contain X*
 2. Confidence is the likelihood that item Y is also bought if item X is bought. It’s calculated as the number of transactions containing X and Y divided by the number of transactions containing X.
+
+    $$
+    support(I) = \frac{Number \quad of \quad transactions \quad containing \quad I}{Total \quad number \quad of \quad transactions}
+    $$
     
     $$
     confidence(X \rarr Y) = {Number \quad of \quad transactions \quad containing \quad X \quad and \quad Y \over Number \quad of \quad transactions \quad containing \quad X}
