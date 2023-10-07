@@ -43,6 +43,32 @@ Association rule mining is a technique to identify underlying relations between 
 
 ## ****Algorithm****
 
+1. **Initialization**:
+   - $L_1$ is initialized with frequent 1-itemsets.
+   - Set $k = 2$.
+
+2. **Main Loop**:
+   - While $L_{k-1}$ is not empty, do the following:
+     - **Self-Joining**:
+       - Generate candidate itemsets $C_k$ using Apriori-gen based on $L_{k-1}$.
+
+     - **Scan Database**:
+       - For each transaction $t$ in the dataset:
+         - Generate subsets of $C_k$ that are candidates for $t$ and store them in $C_t$.
+
+         - For each candidate $c$ in $C_t$:
+           - Increment the count of $c$ by 1.
+
+     - **Pruning**:
+       - Update $L_k$ with candidates from $C_k$ where the count is greater than or equal to the minimum support ($minsup$).
+
+     - Increment $k$ by 1.
+
+3. **Final Result**:
+   - The final set of frequent itemsets and association rules is obtained by combining all frequent itemsets from $L_k$.
+
+---
+
 ![Alt text](assets/image.png)
 
 ---
