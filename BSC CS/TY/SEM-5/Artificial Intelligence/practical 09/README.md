@@ -38,10 +38,6 @@ Association rule mining is a technique to identify underlying relations between 
 1. *An itemset whose support is greater than or equal to a minSup threshold*
 2. Frequent itemsets or also known as frequent pattern simply means all the itemsets that the support satisfies the minimum support threshold.
 
-    $$
-    support(I) = \frac{Number \quad of \quad transactions \quad containing \quad I}{Total \quad number \quad of \quad transactions}
-    $$
-
 ---
 
 ## ****Algorithm****
