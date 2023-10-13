@@ -38,15 +38,9 @@ Follow the prompts to enter the required information.
    python secure_web_server.py
    ```
 
-   expected output:
-   ```bash
-   Enter PEM pass phrase:
-   Server started at ('localhost', 4443)
-   ```
-
 4. Enter the PEM pass phrase when prompted.
 
-5. The server will start at `https://localhost:4443`.
+5. Start the communication.
 
 ## Running the Secure Web Client
 
@@ -59,27 +53,35 @@ Follow the prompts to enter the required information.
    python secure_web_client.py
    ```
 
-   expected output:
-   ```html
-   Response from server:
-   <!DOCTYPE HTML>
-   <html lang="en">
-   <head>
-   <meta charset="utf-8">
-   <title>Directory listing for /</title>
-   </head>
-   <body>
-   <h1>Directory listing for /</h1>
-   <hr>
-   <ul>
-   <li><a href="certificate/">certificate/</a></li>
-   <li><a href="README.md">README.md</a></li>
-   <li><a href="secure_web_client.py">secure_web_client.py</a></li>
-   <li><a href="secure_web_server.py">secure_web_server.py</a></li>
-   </ul>
-   <hr>
-   </body>
-   </html>
-   ```
+4. Start the communication.
 
-4. You should receive a response from the server.
+
+## Output
+
+1. Expected output from server's terminal:
+   ```bash
+   Enter PEM pass phrase:
+   Server started at ('localhost', 4443)
+   Response from client: hello
+   Enter text to send to the client ('q' to quit): Hello i am server
+   Sent to client: Hello i am server
+   127.0.0.1 - - [13/Oct/2023 19:30:39] "POST / HTTP/1.1" 200 -
+   Response from client: Hello i am client
+   Enter text to send to the client ('q' to quit): this is server speaking
+   Sent to client: this is server speaking
+   127.0.0.1 - - [13/Oct/2023 19:31:32] "POST / HTTP/1.1" 200 -
+   Response from client: this is client speaking
+   Enter text to send to the client ('q' to quit): 
+   ```
+   
+2. Expected output from client's terminal:
+   ```bash
+   Enter text to send to the server ('q' to quit): hello
+   Sent to server: hello
+   Response from server: Hello i am server
+   Enter text to send to the server ('q' to quit): Hello i am client
+   Sent to server: Hello i am client
+   Response from server: this is server speaking
+   Enter text to send to the server ('q' to quit): this is client speaking
+   Sent to server: this is client speaking
+   ```
