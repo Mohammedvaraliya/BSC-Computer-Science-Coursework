@@ -1,4 +1,5 @@
 def rail_fence_encrypt(text, rails):
+    text = ''.join([''.join(char) for char in text]).replace(" ", "") # Remove spaces
     fence = [[' ' for _ in range(len(text))] for _ in range(rails)]
     direction = -1  # Direction to move along the rails (up or down)
     row, col = 0, 0  # Initial position on the rail fence
