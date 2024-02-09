@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml-stylesheet href="file:///C:/Program Files (x86)/Nmap/nmap.xsl" type="text/xsl"?><nmaprun args="nmap -p 22,113,139 scanme.nmap.org" profile_name="" scanner="nmap" start="1707470300" startstr="Fri Feb  9 14:48:20 2024" version="7.94" xmloutputversion="1.04"><scaninfo type="syn" protocol="tcp" numservices="3" services="22,113,139"></scaninfo><verbose level="0"></verbose><debugging level="0"></debugging><output type="interactive">Starting Nmap 7.94 ( https://nmap.org ) at 2024-02-09 14:48 India Standard Time
+Nmap scan report for scanme.nmap.org (45.33.32.156)
+Host is up (0.26s latency).
+
+PORT    STATE  SERVICE
+22/tcp  open   ssh
+113/tcp closed ident
+139/tcp closed netbios-ssn
+
+Nmap done: 1 IP address (1 host up) scanned in 0.94 seconds
+</output><host comment=""><status state="up"></status><address addr="45.33.32.156" vendor="" addrtype="ipv4"></address><hostnames><hostname name="scanme.nmap.org" type="user"></hostname><hostname name="scanme.nmap.org" type="PTR"></hostname></hostnames><ports><port portid="22" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="45"></state><service conf="3" method="table" name="ssh"></service></port><port portid="113" protocol="tcp"><state state="closed" reason="reset" reason_ttl="46"></state><service conf="3" method="table" name="ident"></service></port><port portid="139" protocol="tcp"><state state="closed" reason="reset" reason_ttl="43"></state><service conf="3" method="table" name="netbios-ssn"></service></port></ports><os></os><uptime seconds="" lastboot=""></uptime><tcpsequence index="" difficulty="" values=""></tcpsequence><ipidsequence class="" values=""></ipidsequence><tcptssequence class="" values=""></tcptssequence></host><runstats><finished time="1707470301" timestr="Fri Feb  9 14:48:21 2024"></finished><hosts up="1" down="0" total="1"></hosts></runstats></nmaprun>

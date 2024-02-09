@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml-stylesheet href="file:///C:/Program Files (x86)/Nmap/nmap.xsl" type="text/xsl"?><nmaprun args="nmap -sN -p 22 scanme.nmap.org" profile_name="" scanner="nmap" start="1707470874" startstr="Fri Feb  9 14:57:54 2024" version="7.94" xmloutputversion="1.04"><scaninfo type="null" protocol="tcp" numservices="1" services="22"></scaninfo><verbose level="0"></verbose><debugging level="0"></debugging><output type="interactive">Starting Nmap 7.94 ( https://nmap.org ) at 2024-02-09 14:57 India Standard Time
+Nmap scan report for scanme.nmap.org (45.33.32.156)
+Host is up (0.25s latency).
+
+PORT   STATE         SERVICE
+22/tcp open|filtered ssh
+
+Nmap done: 1 IP address (1 host up) scanned in 3.22 seconds
+</output><host comment=""><status state="up"></status><address addr="45.33.32.156" vendor="" addrtype="ipv4"></address><hostnames><hostname name="scanme.nmap.org" type="user"></hostname><hostname name="scanme.nmap.org" type="PTR"></hostname></hostnames><ports><port portid="22" protocol="tcp"><state state="open|filtered" reason="no-response" reason_ttl="0"></state><service conf="3" method="table" name="ssh"></service></port></ports><os></os><uptime seconds="" lastboot=""></uptime><tcpsequence index="" difficulty="" values=""></tcpsequence><ipidsequence class="" values=""></ipidsequence><tcptssequence class="" values=""></tcptssequence></host><runstats><finished time="1707470878" timestr="Fri Feb  9 14:57:58 2024"></finished><hosts up="1" down="0" total="1"></hosts></runstats></nmaprun>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml-stylesheet href="file:///C:/Program Files (x86)/Nmap/nmap.xsl" type="text/xsl"?><nmaprun args="nmap -p 143,993 -Pn --script imap-capabilities 127.0.0.1" profile_name="" scanner="nmap" start="1707470759" startstr="Fri Feb  9 14:55:59 2024" version="7.94" xmloutputversion="1.04"><scaninfo type="syn" protocol="tcp" numservices="2" services="143,993"></scaninfo><verbose level="0"></verbose><debugging level="0"></debugging><output type="interactive">Starting Nmap 7.94 ( https://nmap.org ) at 2024-02-09 14:55 India Standard Time
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.0010s latency).
+
+PORT    STATE  SERVICE
+143/tcp closed imap
+993/tcp closed imaps
+
+Nmap done: 1 IP address (1 host up) scanned in 0.42 seconds
+</output><host comment=""><status state="up"></status><address addr="127.0.0.1" vendor="" addrtype="ipv4"></address><hostnames><hostname name="localhost" type="PTR"></hostname></hostnames><ports><port portid="143" protocol="tcp"><state state="closed" reason="reset" reason_ttl="128"></state><service conf="3" method="table" name="imap"></service></port><port portid="993" protocol="tcp"><state state="closed" reason="reset" reason_ttl="128"></state><service conf="3" method="table" name="imaps"></service></port></ports><os></os><uptime seconds="" lastboot=""></uptime><tcpsequence index="" difficulty="" values=""></tcpsequence><ipidsequence class="" values=""></ipidsequence><tcptssequence class="" values=""></tcptssequence></host><runstats><finished time="1707470760" timestr="Fri Feb  9 14:56:00 2024"></finished><hosts up="1" down="0" total="1"></hosts></runstats></nmaprun>
