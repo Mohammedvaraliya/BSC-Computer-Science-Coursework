@@ -1,0 +1,7 @@
+D:\BSC-CS-Practical-Performed\BSC CS\TY\SEM-6\Cloud Computing and Web Services\Practical 01\Practical_1b_Currency\Practical_1b_Currency\bin\Debug\Practical_1b_Currency.exe.config
+D:\BSC-CS-Practical-Performed\BSC CS\TY\SEM-6\Cloud Computing and Web Services\Practical 01\Practical_1b_Currency\Practical_1b_Currency\bin\Debug\Practical_1b_Currency.exe
+D:\BSC-CS-Practical-Performed\BSC CS\TY\SEM-6\Cloud Computing and Web Services\Practical 01\Practical_1b_Currency\Practical_1b_Currency\bin\Debug\Practical_1b_Currency.pdb
+D:\BSC-CS-Practical-Performed\BSC CS\TY\SEM-6\Cloud Computing and Web Services\Practical 01\Practical_1b_Currency\Practical_1b_Currency\obj\Debug\Practical_1b_Currency.csproj.AssemblyReference.cache
+D:\BSC-CS-Practical-Performed\BSC CS\TY\SEM-6\Cloud Computing and Web Services\Practical 01\Practical_1b_Currency\Practical_1b_Currency\obj\Debug\Practical_1b_Currency.csproj.CoreCompileInputs.cache
+D:\BSC-CS-Practical-Performed\BSC CS\TY\SEM-6\Cloud Computing and Web Services\Practical 01\Practical_1b_Currency\Practical_1b_Currency\obj\Debug\Practical_1b_Currency.exe
+D:\BSC-CS-Practical-Performed\BSC CS\TY\SEM-6\Cloud Computing and Web Services\Practical 01\Practical_1b_Currency\Practical_1b_Currency\obj\Debug\Practical_1b_Currency.pdb

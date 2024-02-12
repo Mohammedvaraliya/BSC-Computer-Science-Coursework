@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://server/" targetNamespace="http://server/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="InrtoDollar" type="tns:InrtoDollar" />
+  <xs:element name="InrtoDollarResponse" type="tns:InrtoDollarResponse" />
+  <xs:complexType name="InrtoDollar">
+    <xs:sequence>
+      <xs:element name="a" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InrtoDollarResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
