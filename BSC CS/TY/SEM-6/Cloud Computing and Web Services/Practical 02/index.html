@@ -1,64 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Query Processor</title>
-</head>
-<body>
-  <h1>T109/Mohammed Varaliya</h1>
-  
-  <h2>Uppercase</h2>
-  <form id="uppercase-form" action="http://localhost:3000/Uppercase" method="get">
-    <label for="uppercase-query">Enter query:</label><br>
-    <input type="text" id="uppercase-query" name="query"><br>
-    <button type="submit">Convert to Uppercase</button>
-  </form>
-  <p id="uppercase-result"></p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Query Processor</title>
+  </head>
+  <body>
+    <h1>T109/Mohammed Varaliya</h1>
 
-  <h2>Lowercase</h2>
-  <form id="lowercase-form" action="http://localhost:3000/Lowercase" method="get">
-    <label for="lowercase-query">Enter query:</label><br>
-    <input type="text" id="lowercase-query" name="query"><br>
-    <button type="submit">Convert to Lowercase</button>
-  </form>
-  <p id="lowercase-result"></p>
+    <h2>Uppercase</h2>
+    <form
+      id="uppercase-form"
+      action="http://localhost:3000/Uppercase"
+      method="get"
+    >
+      <label for="uppercase-query">Enter query:</label><br />
+      <input type="text" id="uppercase-query" name="query" /><br />
+      <button type="submit">Convert to Uppercase</button>
+    </form>
+    <p id="uppercase-result"></p>
 
-  <script>
-    // Get references to the form and result elements
-    const uppercaseForm = document.getElementById('uppercase-form');
-    const lowercaseForm = document.getElementById('lowercase-form');
-    const uppercaseResult = document.getElementById('uppercase-result');
-    const lowercaseResult = document.getElementById('lowercase-result');
+    <h2>Lowercase</h2>
+    <form
+      id="lowercase-form"
+      action="http://localhost:3000/Lowercase"
+      method="get"
+    >
+      <label for="lowercase-query">Enter query:</label><br />
+      <input type="text" id="lowercase-query" name="query" /><br />
+      <button type="submit">Convert to Lowercase</button>
+    </form>
+    <p id="lowercase-result"></p>
+    
+    <script>
+      // Get references to the form and result elements
+      const uppercaseForm = document.getElementById("uppercase-form");
+      const lowercaseForm = document.getElementById("lowercase-form");
+      const uppercaseResult = document.getElementById("uppercase-result");
+      const lowercaseResult = document.getElementById("lowercase-result");
 
-    // Add event listeners to the forms
-    uppercaseForm.addEventListener('submit', async (event) => {
-      event.preventDefault(); // Prevent the default form submission
+      // Add event listeners to the forms
+      uppercaseForm.addEventListener("submit", async (event) => {
+        event.preventDefault(); // Prevent the default form submission
 
-      // Get the input value from the form
-      const query = document.getElementById('uppercase-query').value;
+        // Get the input value from the form
+        const query = document.getElementById("uppercase-query").value;
 
-      // Send a GET request to the server
-      const response = await fetch(`http://localhost:3000/Uppercase?query=${query}`);
-      const data = await response.text();
+        // Send a GET request to the server
+        const response = await fetch(
+          `http://localhost:3000/Uppercase?query=${query}`
+        );
+        const data = await response.text();
 
-      // Update the result element with the response from the server
-      uppercaseResult.textContent = data;
-    });
+        // Update the result element with the response from the server
+        uppercaseResult.textContent = data;
+      });
 
-    lowercaseForm.addEventListener('submit', async (event) => {
-      event.preventDefault(); // Prevent the default form submission
+      lowercaseForm.addEventListener("submit", async (event) => {
+        event.preventDefault(); // Prevent the default form submission
 
-      // Get the input value from the form
-      const query = document.getElementById('lowercase-query').value;
+        // Get the input value from the form
+        const query = document.getElementById("lowercase-query").value;
 
-      // Send a GET request to the server
-      const response = await fetch(`http://localhost:3000/Lowercase?query=${query}`);
-      const data = await response.text();
+        // Send a GET request to the server
+        const response = await fetch(
+          `http://localhost:3000/Lowercase?query=${query}`
+        );
+        const data = await response.text();
 
-      // Update the result element with the response from the server
-      lowercaseResult.textContent = data;
-    });
-  </script>
-</body>
+        // Update the result element with the response from the server
+        lowercaseResult.textContent = data;
+      });
+    </script>
+  </body>
 </html>

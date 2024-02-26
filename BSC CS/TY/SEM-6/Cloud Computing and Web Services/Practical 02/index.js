@@ -12,8 +12,6 @@ app.get('/Uppercase', (req, res) => {
   res.send(`Result of Uppercase: ${queryTerm.toUpperCase()}`);
 })
 
-
-
 app.get('/Lowercase', (req, res) => {
   // Accessing query parameters
   const queryTerm = req.query.query;
