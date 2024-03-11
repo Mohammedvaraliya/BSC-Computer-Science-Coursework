@@ -1,3 +1,4 @@
 wsdl
 node_modules
 /Practical 02/node_modules
+.env
