@@ -68,6 +68,8 @@
     <Content Include="DownloadImageWS.asmx" />
     <Content Include="Images\any-person-not-3199425_640.jpg" />
     <Content Include="Images\how-to-live-an-adventurous-life.jpg" />
+    <Content Include="Images\mouse_6.jpeg" />
+    <Content Include="Images\white-fox-sleeping.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
