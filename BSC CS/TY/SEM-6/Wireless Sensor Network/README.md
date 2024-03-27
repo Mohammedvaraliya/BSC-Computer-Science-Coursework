@@ -13,3 +13,9 @@
 **Implement a Wireless sensor network simulation.**
 
 ---
+
+## Practical 9
+
+## Problem Statement
+
+**Simulate Mobile Adhoc Network with Directional Antenna**
