@@ -1,4 +1,4 @@
-# BSC-CS-Practical-Performed
+# BSC-Computer-Science-Coursework
 
 <b>A compilation of all the code I've written while attending college</b><br><br><br>
 
